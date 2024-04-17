@@ -7,7 +7,6 @@
     grim
     playerctl
     slurp swaybg swayidle swaylock
-    thunar
     waybar wl-clipboard
   ];
   programs.sway.wrapperFeatures.gtk = true;
