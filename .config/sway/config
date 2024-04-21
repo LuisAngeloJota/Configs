@@ -196,26 +196,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while ~/.config/sway/status.sh; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #181818
-        inactive_workspace #181818 #181818 #ffffff
-        focused_workspace #ffffff #181818 #ffffff
-    }
-    font Inter Display Medium 10
-}
-
 # Custom keybinds
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -236,6 +216,29 @@ input type:pointer {
 }
 
 # Appearance
-font pango:Inter Display Medium 10
+set $color_dark_background #2E3440
+set $color_dark_text #D8DEE9
+set $color_dark_border #3B4252
 
+set $color_light_background #D8DEE9
+set $color_light_text #2E3440
+set $color_light_border #E5E9F0
+
+font pango:Inter Display Medium 10
+client.focused $color_light_border $color_light_background $color_light_text #2e9ef4 $color_light_border
+default_border pixel 1
+
+bar {
+    position top
+    status_command while ~/.config/sway/status.sh; do sleep 1; done
+    colors {
+        statusline $color_dark_text
+        background $color_dark_background
+        inactive_workspace #2E3440 #2E3440 $color_dark_text
+        focused_workspace $color_dark_border $color_dark_background $color_dark_text
+    }
+    font Inter Display Medium 10
+}
+
+# Imports
 include /etc/sway/config.d/*
