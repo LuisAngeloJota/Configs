@@ -1,0 +1,6 @@
+n X571GT
+nh
+s 1920x1080@60
+vd nvh264dec
+vs glimagesink
+fps 60
