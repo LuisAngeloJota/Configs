@@ -28,7 +28,6 @@
   ];
 
   fonts.packages = with pkgs; [
-    font-awesome
     inter
     noto-fonts
     noto-fonts-cjk-sans
@@ -39,6 +38,10 @@
   hardware.bluetooth.enable = true;
   hardware.cpu.intel.updateMicrocode = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
+  hardware.nvidia.prime.intelBusId = "PCI:0:2:0";
+  hardware.nvidia.prime.nvidiaBusId = "PCI:1:0:0";
+  hardware.nvidia.prime.offload.enable = true;
+  hardware.nvidia.prime.offload.enableOffloadCmd = true;
   hardware.opengl.enable = true;
   hardware.opengl.extraPackages = with pkgs; [
     intel-compute-runtime
@@ -53,6 +56,11 @@
     "time.cloudflare.com"
   ];
   networking.wireless.iwd.enable = true;
+  networking.wireless.iwd.settings = {
+    DriverQuirks = {
+      PowerSaveDisable = "rtw_8821ce";
+    };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
