@@ -19,6 +19,7 @@
     anki-bin
     brave
     ffmpeg
+    htop
     mpv-unwrapped
     obs-studio
     unzip
@@ -71,7 +72,6 @@
 
   services.pipewire.alsa.enable = true;
   services.pipewire.enable = true;
-  services.pipewire.pulse.enable = true;
   services.printing.enable = true;
   services.thermald.enable = true;
   services.xserver.videoDrivers = [

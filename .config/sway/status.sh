@@ -23,9 +23,9 @@ brightness=$(brightnessctl get | awk '{ print "Brightness: " $1 / 120000 * 100 "
 # Wi-Fi Network Name
 if [ "$(iwctl station list | awk -F '  +' '/wlan/ { print $3 }')" == disconnected ]
 then
-    wifi=$(echo "WiFi: Disconnected")
+    wifi=$(echo "Wi-Fi: Disconnected")
 else
-    wifi=$(echo "WiFi: Connected")
+    wifi=$(echo "Wi-Fi: Connected")
 fi
 
 # Status Bar
