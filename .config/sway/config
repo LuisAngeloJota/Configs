@@ -205,7 +205,8 @@ bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
-bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+shift+s exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+shift+t exec grim -g "$(slurp)" - | tesseract - - | wl-copy
 # Input devices
 input type:keyboard {
   xkb_layout "us"

@@ -13,6 +13,7 @@
     grim
     playerctl
     slurp swaybg swayidle swaylock
+    tesseract
     wl-clipboard
   ];
   programs.sway.wrapperFeatures.gtk = true;

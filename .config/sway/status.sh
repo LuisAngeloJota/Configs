@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/run/current-system/sw/bin/dash
 
 # Date
 date=$(date +"%Y-%m-%d")
@@ -21,7 +21,7 @@ fi
 brightness=$(brightnessctl get | awk '{ print "Brightness: " $1 / 120000 * 100 "%"}')
 
 # Wi-Fi Network Name
-if [ "$(iwctl station list | awk -F '  +' '/wlan/ { print $3 }')" == disconnected ]
+if [ "$(iwctl station list | awk -F '  +' '/wlan/ { print $3 }')" = "disconnected" ]
 then
     wifi=$(echo "Wi-Fi: Disconnected")
 else
