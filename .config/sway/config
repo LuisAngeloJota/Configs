@@ -1,11 +1,6 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
-### Variables
-#
+# =========
+# Variables
+# =========
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
 # Home row direction keys, like vim
@@ -196,9 +191,12 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Additional settings
+focus_follows_mouse no
+
 # Custom keybinds
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 2%+
 
 bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-

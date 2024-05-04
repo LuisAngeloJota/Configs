@@ -1,32 +1,17 @@
-#!/run/current-system/sw/bin/dash
-
 # Date
-date=$(date +"%Y-%m-%d")
-
-# Time
-time=$(date +"%H:%M")
+datetime=$(date +"%Y-%m-%d   %H:%M")
 
 # Speaker
 speaker=$(wpctl inspect @DEFAULT_AUDIO_SINK@ | awk -F '"' '/node.description/ { print "Speaker: " $2 }')
 
 # Volume
-if [ "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{ print $3 }')" ]
-then
-    volume=$(echo "Volume: Muted")
-else
-    volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{ print "Volume: " $2 * 100 "%"}')
-fi
+volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{ if ($3 == "") print "Volume: " $2 * 100 "%"; else print "Volume: Muted" }')
 
 # Brightness
-brightness=$(brightnessctl get | awk '{ print "Brightness: " $1 / 120000 * 100 "%"}')
+brightness=$(brightnessctl get | awk '{ print "Brightness: " $1 / 120000 * 100 "%" }')
 
 # Wi-Fi Network Name
-if [ "$(iwctl station list | awk -F '  +' '/wlan/ { print $3 }')" = "disconnected" ]
-then
-    wifi=$(echo "Wi-Fi: Disconnected")
-else
-    wifi=$(echo "Wi-Fi: Connected")
-fi
+wifi=$(iwctl station list | awk -F '  +' '/wlan/ { print "WiFi: " toupper(substr($3, 1, 1)) tolower(substr($3, 2)) }')
 
 # Status Bar
-echo "$wifi   $speaker   $volume   $brightness   $date   $time"
+printf "%s   %s   %s   %s   %s" "$wifi" "$speaker" "$volume" "$brightness" "$datetime"

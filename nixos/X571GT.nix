@@ -6,7 +6,7 @@
   ];
   system.stateVersion = "23.11";
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
   boot.kernelParams = [
     "mitigations=off"
   ];
@@ -17,14 +17,13 @@
 
   environment.systemPackages = with pkgs; [
     anki-bin
-    brave
-    dash
+    brave btop
     ffmpeg
-    htop
     mpv-unwrapped
     obs-studio
     unzip
     ventoy
+    qpwgraph
     wget
     yt-dlp
   ];
@@ -54,6 +53,10 @@
 
   networking.firewall.enable = false;
   networking.hostName = "X571GT";
+  networking.nameservers = [
+    "1.1.1.1"
+    "2606:4700:4700:1111"
+  ];
   networking.timeServers = [
     "time.cloudflare.com"
   ];
@@ -73,6 +76,7 @@
 
   services.pipewire.alsa.enable = true;
   services.pipewire.enable = true;
+  services.pipewire.jack.enable = true;
   services.printing.enable = true;
   services.thermald.enable = true;
   services.xserver.videoDrivers = [
