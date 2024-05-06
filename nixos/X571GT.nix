@@ -16,7 +16,7 @@
   console.useXkbConfig = true;
 
   environment.systemPackages = with pkgs; [
-    anki
+    anki axel
     brave btop
     ffmpeg
     mpv-unwrapped
