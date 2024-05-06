@@ -6,7 +6,7 @@
   ];
   system.stateVersion = "23.11";
 
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "mitigations=off"
   ];
@@ -16,13 +16,13 @@
   console.useXkbConfig = true;
 
   environment.systemPackages = with pkgs; [
-    anki-bin
+    anki
     brave btop
     ffmpeg
     mpv-unwrapped
-    obs-studio
     unzip
     ventoy
+    wireguard-tools
     qpwgraph
     wget
     yt-dlp
@@ -30,6 +30,7 @@
 
   fonts.packages = with pkgs; [
     inter
+    jetbrains-mono
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
@@ -37,12 +38,6 @@
   ];
 
   hardware.bluetooth.enable = true;
-  hardware.cpu.intel.updateMicrocode = true;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
-  hardware.nvidia.prime.intelBusId = "PCI:0:2:0";
-  hardware.nvidia.prime.nvidiaBusId = "PCI:1:0:0";
-  hardware.nvidia.prime.offload.enable = true;
-  hardware.nvidia.prime.offload.enableOffloadCmd = true;
   hardware.opengl.enable = true;
   hardware.opengl.extraPackages = with pkgs; [
     intel-compute-runtime

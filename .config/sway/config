@@ -192,7 +192,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Additional settings
-focus_follows_mouse no
 
 # Custom keybinds
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
@@ -202,6 +201,10 @@ bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+shift+s exec grim -g "$(slurp)" - | wl-copy
 bindsym $mod+shift+t exec grim -g "$(slurp)" - | tesseract - - | wl-copy
