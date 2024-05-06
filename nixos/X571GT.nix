@@ -4,7 +4,7 @@
     ./bundle.nix
     ./hardware-configuration.nix
   ];
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
