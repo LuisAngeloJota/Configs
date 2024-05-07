@@ -213,8 +213,9 @@ input type:keyboard {
   xkb_layout "us"
   xkb_variant "colemak_dh"
 }
-input type:pointer {
+input type:mouse {
     accel_profile "flat"
+    pointer_accel -0.8
 }
 # ==========
 # Appearance
