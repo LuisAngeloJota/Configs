@@ -20,6 +20,7 @@
     brave btop
     ffmpeg
     mpv-unwrapped
+    obs-studio
     unzip
     ventoy
     wireguard-tools
@@ -71,6 +72,7 @@
   programs.git.enable = true;
   programs.ssh.startAgent = true;
 
+  security.rtkit.enable = true;
   security.sudo.wheelNeedsPassword = false;
 
   services.pipewire.alsa.enable = true;
