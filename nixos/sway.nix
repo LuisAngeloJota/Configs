@@ -2,6 +2,7 @@
 {
   environment.sessionVariables = {
     GTK_THEME = "Adwaita:dark";
+    NIXOS_OZONE_WL = "1";
   };
   programs.sway.enable = true;
   programs.sway.extraOptions = [
