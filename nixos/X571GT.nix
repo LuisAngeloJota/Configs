@@ -24,7 +24,7 @@
     unzip
     ventoy
     wireguard-tools
-    qpwgraph
+    qpwgraph qbittorrent
     wget
     yt-dlp
   ];

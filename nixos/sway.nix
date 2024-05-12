@@ -12,10 +12,12 @@
     brightnessctl
     foot fuzzel
     grim
+    libnotify
+    mako
     playerctl
     slurp swaybg swayidle swaylock
     tesseract
-    wl-clipboard
+    wl-clipboard wl-screenrec
   ];
   programs.sway.wrapperFeatures.gtk = true;
   programs.thunar.enable = true;
