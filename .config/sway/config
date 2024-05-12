@@ -208,6 +208,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+shift+s exec grim -g "$(slurp)" - | wl-copy
 bindsym $mod+shift+t exec grim -g "$(slurp)" - | tesseract - - | wl-copy
+
+bindsym $mod+ctrl+s exec sh $HOME/.config/sway/screenrec.sh
+
 # Input devices
 input type:keyboard {
   xkb_layout "us"
@@ -251,7 +254,7 @@ default_floating_border pixel 1
 
 bar {
     position top
-    status_command while ~/.config/sway/status.sh; do sleep 1; done
+    status_command while $HOME/.config/sway/statusbar.sh; do sleep 1; done
     colors {
         statusline $nord6
         background $nord0
