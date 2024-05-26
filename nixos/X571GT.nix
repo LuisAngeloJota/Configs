@@ -4,7 +4,7 @@
     ./bundle.nix
     ./hardware-configuration.nix
   ];
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
@@ -21,6 +21,7 @@
     ffmpeg
     mpv-unwrapped
     obs-studio
+    shotcut
     unzip
     ventoy
     wireguard-tools
