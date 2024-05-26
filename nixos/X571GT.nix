@@ -19,6 +19,7 @@
     anki axel
     brave btop
     ffmpeg
+    libreoffice-fresh
     mpv-unwrapped
     obs-studio
     shotcut
