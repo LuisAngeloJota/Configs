@@ -19,7 +19,7 @@
     anki axel
     brave btop
     ffmpeg
-    libreoffice-fresh
+    libreoffice-fresh localsend
     mpv-unwrapped
     obs-studio
     shotcut
