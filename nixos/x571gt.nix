@@ -23,6 +23,7 @@
     mpv-unwrapped
     obs-studio
     peazip
+    rsync
     shotcut
     ventoy
     wireguard-tools
