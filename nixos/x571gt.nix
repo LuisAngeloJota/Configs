@@ -22,12 +22,11 @@
     libreoffice-fresh localsend
     mpv-unwrapped
     obs-studio
+    peazip
     shotcut
-    unzip
     ventoy
     wireguard-tools
     qpwgraph qbittorrent
-    wget
     yt-dlp
   ];
 
@@ -72,7 +71,6 @@
   nixpkgs.config.allowUnfree = true;
 
   programs.git.enable = true;
-  programs.ssh.startAgent = true;
 
   security.rtkit.enable = true;
   security.sudo.wheelNeedsPassword = false;
