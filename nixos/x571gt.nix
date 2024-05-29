@@ -19,10 +19,9 @@
     anki axel
     brave btop
     ffmpeg
-    libreoffice-fresh localsend
+    libarchive libreoffice-fresh localsend
     mpv-unwrapped
     obs-studio
-    peazip
     rsync
     shotcut
     ventoy
