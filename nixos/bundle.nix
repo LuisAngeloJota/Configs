@@ -6,6 +6,6 @@
     #./steam.nix
     #./sway.nix
     #./uxplay.nix
-    #./virt-manager.nix
+    #./virtualbox.nix
   ];
 }
