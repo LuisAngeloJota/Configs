@@ -224,14 +224,6 @@ input type:pointer {
 # Appearance
 # ==========
 
-# GTK
-exec {
-    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-    gsettings set org.gnome.desktop.interface cursor-theme Adwaita
-    gsettings set org.gnome.desktop.interface gtk-theme Adwaita
-    gsettings set org.gnome.desktop.interface icon-theme Adwaita
-}
-
 # Polar Night
 set $nord0 #2E3440
 set $nord1 #3B4252
@@ -255,6 +247,14 @@ set $nord12 #D08770
 set $nord13 #EBCB8B
 set $nord14 #A3BE8C
 set $nord15 #B48EAD
+
+# GTK
+exec {
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+    gsettings set org.gnome.desktop.interface cursor-theme Adwaita
+    gsettings set org.gnome.desktop.interface gtk-theme Adwaita
+    gsettings set org.gnome.desktop.interface icon-theme Adwaita
+}
 
 client.focused $nord10 $nord10 $nord6 #2e9ef4 $nord10
 default_border pixel 1
