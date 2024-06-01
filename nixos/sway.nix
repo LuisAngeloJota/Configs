@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 {
   environment.sessionVariables = {
-    GTK_THEME = "Adwaita:dark";
     NIXOS_OZONE_WL = "1";
   };
 
@@ -12,7 +11,7 @@
   programs.sway.extraPackages = with pkgs; [
     brightnessctl
     foot fuzzel
-    gnome.adwaita-icon-theme grim
+    glib gnome.adwaita-icon-theme grim
     libnotify
     mako
     playerctl
@@ -22,4 +21,8 @@
   ];
   programs.sway.wrapperFeatures.gtk = true;
   programs.thunar.enable = true;
+
+  xdg.portal.extraPortals = with pkgs; [
+    xdg-desktop-portal-gtk
+  ];
 }
