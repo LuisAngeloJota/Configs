@@ -23,6 +23,7 @@
   programs.thunar.enable = true;
 
   services.gvfs.enable = true;
+  services.tumbler.enable = true;
 
   xdg.portal.extraPortals = with pkgs; [
     xdg-desktop-portal-gtk
