@@ -5,6 +5,7 @@
     #./sideloader.nix
     #./steam.nix
     #./sway.nix
+    #./thunar.nix
     #./uxplay.nix
     #./virtualbox.nix
   ];
