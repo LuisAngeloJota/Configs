@@ -4,6 +4,9 @@
     GTK_THEME = "Adwaita:dark";
     NIXOS_OZONE_WL = "1";
   };
+
+  gtk.iconCache.enable = true;
+
   programs.sway.enable = true;
   programs.sway.extraOptions = [
     "--unsupported-gpu"
