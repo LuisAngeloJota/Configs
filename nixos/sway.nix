@@ -5,8 +5,6 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  gtk.iconCache.enable = true;
-
   programs.sway.enable = true;
   programs.sway.extraOptions = [
     "--unsupported-gpu"
@@ -14,7 +12,7 @@
   programs.sway.extraPackages = with pkgs; [
     brightnessctl
     foot fuzzel
-    grim
+    gnome.adwaita-icon-theme grim
     libnotify
     mako
     playerctl
