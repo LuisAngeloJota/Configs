@@ -7,6 +7,6 @@
     #./sway.nix
     #./thunar.nix
     #./uxplay.nix
-    #./virtualbox.nix
+    #./virt-manager.nix
   ];
 }
