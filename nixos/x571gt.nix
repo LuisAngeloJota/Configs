@@ -20,7 +20,7 @@
     brave btop
     ffmpeg
     libarchive libreoffice-fresh localsend
-    mpv-unwrapped
+    micro mpv-unwrapped
     obs-studio
     rsync
     shotcut
