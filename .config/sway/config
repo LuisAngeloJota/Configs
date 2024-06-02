@@ -248,6 +248,9 @@ set $nord13 #EBCB8B
 set $nord14 #A3BE8C
 set $nord15 #B48EAD
 
+# Cursor
+seat seat0 xcursor_theme Adwaita
+
 # GTK
 exec {
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
