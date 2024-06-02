@@ -73,7 +73,6 @@
   programs.git.enable = true;
 
   security.rtkit.enable = true;
-  security.sudo.wheelNeedsPassword = false;
 
   services.pipewire.alsa.enable = true;
   services.pipewire.enable = true;
