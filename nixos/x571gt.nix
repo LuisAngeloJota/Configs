@@ -93,7 +93,7 @@
     "wheel"
   ];
   users.users.la.isNormalUser = true;
-  users.users.la.initialHashedPassword = "";
+  users.users.la.initialPassword = "la";
 
   zramSwap.enable = true;
 }
