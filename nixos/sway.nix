@@ -13,7 +13,7 @@
     foot fuzzel
     glib gnome.adwaita-icon-theme grim
     libnotify
-    mako micro
+    mako
     playerctl
     slurp swaybg swayidle swaylock
     tesseract
