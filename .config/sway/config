@@ -29,20 +29,6 @@ output * bg ~/.config/sway/background.png fill
 # Idle
 exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-
 ### Key bindings
 #
 # Basics:
@@ -202,9 +188,14 @@ bindsym $mod+shift+t exec grim -g "$(slurp)" - | tesseract - - | wl-copy
 bindsym $mod+ctrl+s exec sh $HOME/.config/sway/screenrec.sh
 
 # Input devices
+input type:touchpad {
+    middle_emulation enabled
+    natural_scroll enabled
+    tap enabled
+}
 input type:keyboard {
-  xkb_layout "us"
-  xkb_variant "colemak_dh"
+    xkb_layout "us"
+    xkb_variant "colemak_dh"
 }
 input type:pointer {
     accel_profile "flat"
