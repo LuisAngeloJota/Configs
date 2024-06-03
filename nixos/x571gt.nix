@@ -19,6 +19,7 @@
     anki axel
     brave btop
     ffmpeg
+    git
     libarchive libreoffice-fresh localsend
     micro mpv-unwrapped
     obs-studio
