@@ -70,8 +70,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.git.enable = true;
-
   security.rtkit.enable = true;
 
   services.pipewire.alsa.enable = true;
