@@ -168,6 +168,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Additional settings
+focus_follows_mouse no
 
 # Custom keybinds
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
