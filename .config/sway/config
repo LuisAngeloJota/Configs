@@ -1,38 +1,26 @@
-# =========
-# Variables
-# =========
+# ==============
+# Default Config
+# ==============
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
-# Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
-# Your preferred terminal emulator
+
+# Terminal keybind
 set $term foot
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
+
+# Application launcher keybind
 set $menu fuzzel | xargs swaymsg exec --
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
+# Wallpaper
 output * bg ~/.config/sway/background.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
 
-# Idle
+# Idle Management
 exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
-### Key bindings
-#
+# Keybinds
+
 # Basics:
-#
+
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -54,9 +42,9 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
+
 # Moving around:
-#
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -78,9 +66,9 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
+
 # Workspaces:
-#
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -105,9 +93,9 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-#
+
 # Layout stuff:
-#
+
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
@@ -130,9 +118,9 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
-#
+
 # Scratchpad:
-#
+
     # Sway has a "scratchpad", which is a bag of holding for windows.
     # You can send windows there and get them back later.
 
@@ -142,9 +130,9 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+tab scratchpad show
-#
+
 # Resizing containers:
-#
+
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -167,7 +155,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# ===================
 # Additional settings
+# ===================
+
 focus_follows_mouse no
 
 # Custom keybinds
