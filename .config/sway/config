@@ -2,7 +2,7 @@
 # Default Config
 # ==============
 
-# Modifier key (Mod1 = Alt)
+# Modifier key (Mod1 = Left Alt)
 set $mod Mod1
 
 # Terminal keybind
