@@ -232,10 +232,12 @@ exec {
     gsettings set org.gnome.desktop.interface icon-theme Adwaita
 }
 
+# Window border
 client.focused $nord10 $nord10 $nord6 #2e9ef4 $nord10
 default_border pixel 1
 default_floating_border pixel 1
 
+# Status bar
 bar {
     position top
     status_command while $HOME/.config/sway/statusbar.sh; do sleep 1; done
