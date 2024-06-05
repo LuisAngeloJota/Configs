@@ -20,6 +20,7 @@
     brave btop
     ffmpeg
     git
+    imagemagick
     libarchive libreoffice-fresh localsend
     micro mpv-unwrapped
     obs-studio
