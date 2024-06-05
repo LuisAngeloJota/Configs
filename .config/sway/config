@@ -2,7 +2,7 @@
 # Default Config
 # ==============
 
-# Logo key. Use Mod1 for Alt.
+# Modifier key (Mod1 = Alt)
 set $mod Mod1
 
 # Terminal keybind
