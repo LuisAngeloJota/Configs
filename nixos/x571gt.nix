@@ -17,7 +17,7 @@
 
   environment.systemPackages = with pkgs; [
     anki axel
-    brave btop
+    btop
     chromium
     ffmpeg
     git
