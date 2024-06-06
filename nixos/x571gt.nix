@@ -18,6 +18,7 @@
   environment.systemPackages = with pkgs; [
     anki axel
     brave btop
+    chromium
     ffmpeg
     git
     imagemagick
