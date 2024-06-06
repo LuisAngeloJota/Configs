@@ -213,12 +213,12 @@ seat seat0 xcursor_theme Adwaita
 exec {
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     gsettings set org.gnome.desktop.interface cursor-theme Adwaita
-    gsettings set org.gnome.desktop.interface gtk-theme Adwaita
+    gsettings set org.gnome.desktop.interface gtk-theme Nordic
     gsettings set org.gnome.desktop.interface icon-theme Adwaita
 }
 
 # Window border
-client.focused $nord10 $nord10 $nord6 #2e9ef4 $nord10
+client.focused $nord10 $nord10 $nord6 #2e9ef4 $nord7
 default_border pixel 1
 default_floating_border pixel 1
 
