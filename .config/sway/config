@@ -230,7 +230,7 @@ bar {
         statusline $nord6
         background $nord0
         inactive_workspace $nord0 $nord0 $nord6
-        focused_workspace $nord10 $nord10 $nord6
+        focused_workspace $nord7 $nord7 $nord0
     }
     font Inter Display Medium 10
 }
