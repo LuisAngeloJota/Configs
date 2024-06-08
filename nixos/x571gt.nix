@@ -10,6 +10,7 @@
   boot.kernelParams = [
     "mitigations=off"
     "tsx=on"
+    "vm.swappiness=0"
   ];
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
