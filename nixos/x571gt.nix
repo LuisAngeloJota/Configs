@@ -74,6 +74,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  powerManagement.cpuFreqGovernor = "performance";
+
   security.rtkit.enable = true;
 
   services.pipewire.alsa.enable = true;
