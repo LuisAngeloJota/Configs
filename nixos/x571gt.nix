@@ -9,7 +9,6 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "mitigations=off"
-    "tsx=on"
   ];
   boot.kernel.sysctl = {
     "vm.swappiness" = 0;
