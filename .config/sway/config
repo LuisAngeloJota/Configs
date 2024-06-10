@@ -19,8 +19,6 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
 
 # Keybinds
 
-# Basics:
-
     # Start a terminal
     bindsym $mod+Return exec $term
 
