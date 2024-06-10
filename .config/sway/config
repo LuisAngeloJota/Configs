@@ -126,6 +126,8 @@ bindsym $mod+r mode "resize"
 
 focus_follows_mouse no
 
+for_window [workspace="__focused__"] inhibit_idle fullscreen
+
 # Custom keybinds
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 2%+
