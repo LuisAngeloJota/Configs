@@ -151,12 +151,12 @@ input type:touchpad {
     tap enabled
 }
 input type:keyboard {
-    xkb_layout "us"
-    xkb_variant "colemak_dh"
+    xkb_layout us
+    xkb_variant colemak_dh
 }
 input type:pointer {
-    accel_profile "flat"
-    pointer_accel -0.9
+    accel_profile flat
+    pointer_accel -0.95
 }
 # ==========
 # Appearance
