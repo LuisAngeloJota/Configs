@@ -1,15 +1,9 @@
-# ==============
-# Default Config
-# ==============
+# ======
+# Config
+# ======
 
 # Modifier key (Mod1 = Left Alt)
 set $mod Mod1
-
-# Terminal
-set $term foot
-
-# Application launcher
-set $menu fuzzel | xargs swaymsg exec --
 
 # Wallpaper
 output * bg ~/.config/sway/background.png fill
@@ -19,14 +13,14 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
 
 # Keybinds
 
-    # Start a terminal
-    bindsym $mod+Return exec $term
+    # Application launcher
+    bindsym $mod+Space exec fuzzel | xargs swaymsg exec --
+
+    # Terminal
+    bindsym $mod+Return exec foot
 
     # Kill focused window
     bindsym $mod+q kill
-
-    # Start your launcher
-    bindsym $mod+Space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -39,7 +33,7 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-# Moving around:
+# Moving around
 
     # Change the focus
     bindsym $mod+left focus left
@@ -53,7 +47,7 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
     bindsym $mod+Shift+up move up
     bindsym $mod+Shift+right move right
 
-# Workspaces:
+# Workspaces
 
     # Switch to workspace
     bindsym $mod+1 workspace number 1
@@ -79,7 +73,7 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
 
-# Layout stuff:
+# Layout stuff
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout toggle split
@@ -93,7 +87,7 @@ exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "outp
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
-# Scratchpad:
+# Scratchpad
 
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+tab move scratchpad
