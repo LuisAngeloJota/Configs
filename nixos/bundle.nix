@@ -3,7 +3,6 @@
   imports = [
     #./appimage.nix
     #./idevice-tools.nix
-    #./sideloader.nix
     #./steam.nix
     #./sway.nix
     #./thunar.nix
