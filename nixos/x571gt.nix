@@ -62,8 +62,8 @@
   networking.firewall.enable = false;
   networking.hostName = "X571GT";
   networking.nameservers = [
-    "1.1.1.1"
-    "2606:4700:4700:1111"
+    "127.0.0.1"
+    "::1"
   ];
   networking.timeServers = [
     "time.cloudflare.com"
@@ -87,6 +87,7 @@
   services.pipewire.pulse.enable = true;
   services.printing.enable = true;
   services.thermald.enable = true;
+  services.unbound.enable = true;
   services.xserver.videoDrivers = [
     "nvidia"
   ];
