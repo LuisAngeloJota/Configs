@@ -2,8 +2,7 @@
 # Status Bar
 # ==========
 
-printf "%s   %s   %s   %s   %s   %s" \
-"$(top -b -n 1 -p 0 | awk '/Cpu/ { print "CPU: " $2 + $4 "%" }')" \
+printf "%s   %s   %s   %s   %s" \
 "$(iwctl station list | awk -F '  +' '/wlan/ { print "WiFi: " toupper(substr($3, 1, 1)) substr($3, 2) }')" \
 "$(wpctl inspect @DEFAULT_AUDIO_SINK@ | awk -F '"' '/node.description/ { print "Speaker: " $2 }')" \
 "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{ if ($3 == "") print "Volume: " $2 * 100 "%"; else print "Volume: Muted" }')" \
