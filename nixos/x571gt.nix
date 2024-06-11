@@ -20,7 +20,7 @@
   console.useXkbConfig = true;
 
   environment.systemPackages = with pkgs; [
-    anki axel
+    anki
     btop
     chromium
     ffmpeg
