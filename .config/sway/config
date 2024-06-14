@@ -152,7 +152,7 @@ input type:keyboard {
 }
 input type:pointer {
     accel_profile flat
-    pointer_accel -0.95
+    pointer_accel -0.93
 }
 # ==========
 # Appearance
