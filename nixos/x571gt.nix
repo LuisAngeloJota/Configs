@@ -27,13 +27,13 @@
     git
     imagemagick
     libarchive libreoffice-fresh localsend
-    micro mpv-unwrapped
+    mpv-unwrapped
     obs-studio
     rsync
     shotcut
     ventoy
     wireguard-tools
-    qpwgraph qbittorrent
+    qpwgraph
     yt-dlp
   ];
 
@@ -61,10 +61,6 @@
 
   networking.firewall.enable = false;
   networking.hostName = "X571GT";
-  networking.nameservers = [
-    "127.0.0.1"
-    "::1"
-  ];
   networking.timeServers = [
     "time.cloudflare.com"
   ];
@@ -87,7 +83,6 @@
   services.pipewire.pulse.enable = true;
   services.printing.enable = true;
   services.thermald.enable = true;
-  services.unbound.enable = true;
   services.xserver.videoDrivers = [
     "nvidia"
   ];
