@@ -20,7 +20,7 @@
   console.useXkbConfig = true;
 
   environment.systemPackages = with pkgs; [
-    anki
+    anki aria2
     btop
     chromium
     ffmpeg
