@@ -2,8 +2,8 @@
 {
   imports = [
     #./appimage.nix
+    #./gaming.nix
     #./idevice-tools.nix
-    #./steam.nix
     #./sway.nix
     #./thunar.nix
     #./uxplay.nix
