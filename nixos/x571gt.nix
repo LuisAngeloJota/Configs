@@ -30,7 +30,7 @@
     mpv
     obs-studio
     rsync
-    shotcut
+    shotcut streamlink
     ventoy
     wireguard-tools
     qpwgraph
