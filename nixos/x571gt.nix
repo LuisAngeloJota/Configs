@@ -61,6 +61,10 @@
 
   networking.firewall.enable = false;
   networking.hostName = "X571GT";
+  networking.nameservers = [
+    "127.0.0.1"
+    "::1"
+  ];
   networking.timeServers = [
     "time.cloudflare.com"
   ];
@@ -77,6 +81,11 @@
 
   security.rtkit.enable = true;
 
+  services.nextdns.arguments = [
+    "-config"
+    "a96f8b"
+  ];
+  services.nextdns.enable = true;
   services.pipewire.alsa.enable = true;
   services.pipewire.enable = true;
   services.pipewire.jack.enable = true;
