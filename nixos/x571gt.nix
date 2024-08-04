@@ -27,7 +27,7 @@
     git
     imagemagick
     libarchive libreoffice-fresh localsend
-    mpv-unwrapped
+    mpv
     obs-studio
     rsync
     shotcut
