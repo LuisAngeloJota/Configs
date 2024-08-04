@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    bottles-unwrapped
+    bottles
     mangohud
   ];
 
