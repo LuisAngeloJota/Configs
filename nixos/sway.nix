@@ -11,7 +11,7 @@
   programs.sway.extraPackages = with pkgs; [
     brightnessctl
     foot fuzzel
-    glib gnome.adwaita-icon-theme grim
+    glib adwaita-icon-theme grim
     libnotify
     mako
     nordic
