@@ -15,7 +15,6 @@
     glib adwaita-icon-theme grim
     libnotify
     mako
-    nordic
     playerctl
     slurp swaybg swayidle swaylock
     tesseract
