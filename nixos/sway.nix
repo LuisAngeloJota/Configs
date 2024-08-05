@@ -19,7 +19,7 @@
     slurp swaybg swayidle swaylock
     tesseract
     vulkan-validation-layers
-    wl-clipboard wl-screenrec
+    wl-clipboard
   ];
   programs.sway.wrapperFeatures.gtk = true;
 
