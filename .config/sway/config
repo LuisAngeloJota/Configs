@@ -138,8 +138,6 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+shift+s exec grim -g "$(slurp)" - | wl-copy
 bindsym $mod+shift+t exec grim -g "$(slurp)" - | tesseract - - | wl-copy
 
-bindsym $mod+ctrl+s exec sh $HOME/.config/sway/screenrec.sh
-
 # Input devices
 input type:touchpad {
     middle_emulation enabled
@@ -189,7 +187,7 @@ seat seat0 xcursor_theme Adwaita
 exec {
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     gsettings set org.gnome.desktop.interface cursor-theme Adwaita
-    gsettings set org.gnome.desktop.interface gtk-theme Nordic
+    gsettings set org.gnome.desktop.interface gtk-theme Adwaita
     gsettings set org.gnome.desktop.interface icon-theme Adwaita
 }
 
