@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   environment.sessionVariables = {
+    GTK_THEME = "Adwaita:dark";
     NIXOS_OZONE_WL = "1";
     WLR_RENDERER = "vulkan";
   };
