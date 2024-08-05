@@ -156,29 +156,9 @@ input type:pointer {
 # Appearance
 # ==========
 
-# Polar Night
-set $nord0 #2E3440
-set $nord1 #3B4252
-set $nord2 #434C5E
-set $nord3 #4C566A
-
-# Snow
-set $nord4 #D8DEE9
-set $nord5 #E5E9F0
-set $nord6 #ECEFF4
-
-# Frost
-set $nord7 #8FBCBB
-set $nord8 #88C0D0
-set $nord9 #81A1C1
-set $nord10 #5E81AC
-
-# Aurora
-set $nord11 #BF616A
-set $nord12 #D08770
-set $nord13 #EBCB8B
-set $nord14 #A3BE8C
-set $nord15 #B48EAD
+# Colors
+set $bg #202020
+set $fg #FFFFFF
 
 # Cursor
 seat seat0 xcursor_theme Adwaita
@@ -192,19 +172,19 @@ exec {
 }
 
 # Window border
-client.focused $nord10 $nord10 $nord6 #2e9ef4 $nord7
-default_border pixel 1
-default_floating_border pixel 1
+client.focused $fg $bg $fg #2e9ef4 $bg
+default_border pixel 0
+default_floating_border pixel 0
 
 # Status bar
 bar {
     position top
     status_command while $HOME/.config/sway/statusbar.sh; do sleep 1; done
     colors {
-        statusline $nord6
-        background $nord0
-        inactive_workspace $nord0 $nord0 $nord6
-        focused_workspace $nord7 $nord7 $nord0
+        statusline $fg
+        background $bg
+        inactive_workspace $bg $bg $fg
+        focused_workspace $fg $fg $bg
     }
     font Inter Display Medium 10
 }
