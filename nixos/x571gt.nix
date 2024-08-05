@@ -25,7 +25,6 @@
     chromium
     ffmpeg
     git
-    handbrake
     imagemagick
     libarchive libreoffice-fresh localsend
     mpv
