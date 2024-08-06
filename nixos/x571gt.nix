@@ -23,7 +23,7 @@
     anki aria2
     btop
     chromium
-    ffmpeg
+    ffmpeg-full
     git
     imagemagick
     libarchive libreoffice-fresh localsend
