@@ -1,103 +1,85 @@
-# ======
-# Config
-# ======
-
 # Modifier key (Mod1 = Left Alt)
 set $mod Mod1
 
 # Wallpaper
 output * bg ~/.config/sway/background.png fill
 
-# Idle Management
+# Idle management
 exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
-# Keybinds
+# Application launcher
+bindsym $mod+Space exec fuzzel | xargs swaymsg exec --
 
-    # Application launcher
-    bindsym $mod+Space exec fuzzel | xargs swaymsg exec --
+# Terminal
+bindsym $mod+Return exec foot
 
-    # Terminal
-    bindsym $mod+Return exec foot
+# Kill focused window
+bindsym $mod+q kill
 
-    # Kill focused window
-    bindsym $mod+q kill
+# Floating modifier
+floating_modifier $mod normal
 
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Also works for non-floating windows.
-    floating_modifier $mod normal
+# Config reload
+bindsym $mod+Shift+c reload
 
-    # Reload the configuration file
-    bindsym $mod+Shift+c reload
+# Exit sway
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+# Change the focus
+bindsym $mod+left focus left
+bindsym $mod+down focus down
+bindsym $mod+up focus up
+bindsym $mod+right focus right
 
-# Moving around
+# Move the focused window
+bindsym $mod+Shift+left move left
+bindsym $mod+Shift+down move down
+bindsym $mod+Shift+up move up
+bindsym $mod+Shift+right move right
 
-    # Change the focus
-    bindsym $mod+left focus left
-    bindsym $mod+down focus down
-    bindsym $mod+up focus up
-    bindsym $mod+right focus right
+# Switch to workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 
-    # Move the focused window
-    bindsym $mod+Shift+left move left
-    bindsym $mod+Shift+down move down
-    bindsym $mod+Shift+up move up
-    bindsym $mod+Shift+right move right
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
 
-# Workspaces
+# Switch the current container between different layout styles
+bindsym $mod+s layout toggle split
 
-    # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen
 
-    # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+shift+f floating toggle
 
-# Layout stuff
+# Move focus to the parent container
+bindsym $mod+a focus parent
 
-    # Switch the current container between different layout styles
-    bindsym $mod+s layout toggle split
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+tab move scratchpad
 
-    # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+# Toggle scratchpad
+bindsym $mod+tab scratchpad show
 
-    # Toggle the current focus between tiling and floating mode
-    bindsym $mod+shift+f floating toggle
-
-    # Move focus to the parent container
-    bindsym $mod+a focus parent
-
-# Scratchpad
-
-    # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+tab move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+tab scratchpad show
-
-# Resizing containers:
-
+# Resizing containers
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -114,31 +96,32 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# ===================
-# Additional settings
-# ===================
-
+# Disable window focus on mouse hover
 focus_follows_mouse no
 
+# Inhibit idle on current workspace while fullscreen
 for_window [workspace="__focused__"] inhibit_idle fullscreen
 
-# Custom keybinds
+# Brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 2%+
 
+# Media
 bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Screenshot
 bindsym $mod+shift+s exec grim -g "$(slurp)" - | wl-copy
+
+# OCR
 bindsym $mod+shift+t exec grim -g "$(slurp)" - | tesseract - - | wl-copy
 
-# Input devices
+# Input device config
 input type:touchpad {
     middle_emulation enabled
     natural_scroll enabled
@@ -152,9 +135,6 @@ input type:pointer {
     accel_profile flat
     pointer_accel -0.90
 }
-# ==========
-# Appearance
-# ==========
 
 # Colors
 set $bg #202020
@@ -171,7 +151,7 @@ exec {
     gsettings set org.gnome.desktop.interface icon-theme Adwaita
 }
 
-# Window border
+# Window config
 client.focused $fg $bg $fg #2e9ef4 $bg
 default_border pixel 0
 default_floating_border pixel 0
