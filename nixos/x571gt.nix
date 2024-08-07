@@ -91,8 +91,8 @@
   services.pipewire.enable = true;
   services.pipewire.jack.enable = true;
   services.pipewire.pulse.enable = true;
+  services.power-profiles-daemon.enable = true;
   services.printing.enable = true;
-  services.thermald.enable = true;
   services.xserver.videoDrivers = [
     "nvidia"
   ];
