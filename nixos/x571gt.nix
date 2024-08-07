@@ -99,11 +99,6 @@
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.variant = "colemak_dh";
 
-  systemd.coredump.extraConfig = ''
-    Storage=none
-    ProcessSizeMax=0
-  '';
-
   time.timeZone = "Asia/Manila";
 
   users.users.la.extraGroups = [
