@@ -78,6 +78,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  nix.settings.auto-optimise-store = true;
+
   powerManagement.cpuFreqGovernor = "performance";
 
   security.rtkit.enable = true;
