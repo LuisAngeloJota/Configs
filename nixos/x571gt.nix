@@ -11,6 +11,11 @@
     "mitigations=off"
   ];
 
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 200;
+    "vm.page-cluster" = 0;
+  };
+
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
 
