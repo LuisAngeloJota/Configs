@@ -30,7 +30,7 @@
     handbrake
     imagemagick
     libarchive libreoffice-fresh localsend
-    mpv
+    mediainfo mpv
     obs-studio
     protonup-qt
     rsync
