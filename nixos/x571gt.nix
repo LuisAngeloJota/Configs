@@ -32,6 +32,7 @@
     libarchive libreoffice-fresh localsend
     mpv
     obs-studio
+    protonup-qt
     rsync
     shotcut streamlink
     ventoy
