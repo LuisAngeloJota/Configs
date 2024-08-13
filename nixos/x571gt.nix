@@ -22,7 +22,7 @@
   console.useXkbConfig = true;
 
   environment.systemPackages = with pkgs; [
-    anki aria2
+    anki aria2 audacious
     btop
     chromium
     ffmpeg firefox
@@ -34,7 +34,7 @@
     obs-studio
     protonup-qt
     rsync
-    shotcut streamlink
+    shotcut streamlink streamrip
     ventoy
     wireguard-tools
     qpwgraph
