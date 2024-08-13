@@ -25,7 +25,7 @@
     anki aria2
     btop
     chromium
-    ffmpeg
+    ffmpeg firefox
     git
     handbrake
     imagemagick
