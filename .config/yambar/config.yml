@@ -1,0 +1,81 @@
+bar:
+  height: 24
+  location: top
+  foreground: FFFFFFFF
+  background: 202020FF
+  font: Inter Display Medium:pixelsize=14
+  left:
+    - i3:
+        content:
+          "":
+            map:
+              conditions:
+                state == focused:
+                  string:
+                    text: "{name}"
+                    left-margin: 6
+                    right-margin: 6
+                    deco:
+                      underline: {size: 2, color: FFFFFFFF}
+                state == unfocused:
+                  string:
+                    text: "{name}"
+                    left-margin: 6
+                    right-margin: 6
+                state == invisible:
+                  string:
+                    text: "{name}"
+                    left-margin: 6
+                    right-margin: 6
+  right:
+    - pipewire:
+        content:
+          map:
+            conditions:
+              type == "sink":
+                map:
+                  conditions:
+                    ~muted:
+                       - string:
+                           text: ""
+                           font: Font Awesome 6:style=solid
+                       - string:
+                           text: "{cubic_volume}%"
+                           left-margin: 6
+                           right-margin: 6
+                    muted:
+                      - string:
+                          text: ""
+                          font: Font Awesome 6:style=solid
+                      - string:
+                           text: "{cubic_volume}%"
+                           left-margin: 6
+                           right-margin: 6
+    - network:
+        content:
+          map:
+            conditions:
+              state == up:
+                - string:
+                    text: ""
+                    font: Font Awesome 6:style=solid
+                - string:
+                    text: "{ssid}"
+                    left-margin: 6
+                    right-margin: 6
+    - clock:
+        content:
+          - string:
+              text: ""
+              font: Font Awesome 6:style=solid
+          - string:
+              text: "{date}"
+              left-margin: 6
+              right-margin: 6
+          - string:
+              text: ""
+              font: Font Awesome 6:style=solid
+          - string:
+              text: "{time}"
+              left-margin: 6
+              right-margin: 6
