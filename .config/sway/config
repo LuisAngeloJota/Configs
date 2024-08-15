@@ -153,17 +153,7 @@ default_border pixel 1
 default_floating_border pixel 1
 
 # Status bar
-bar {
-    position top
-    status_command while $HOME/.config/sway/statusbar.sh; do sleep 1; done
-    colors {
-        statusline $fg
-        background $bg
-        inactive_workspace $bg $bg $fg
-        focused_workspace $fg $fg $bg
-    }
-    font Inter Display Medium 10
-}
+exec yambar
 
 # Imports
 include /etc/sway/config.d/*
