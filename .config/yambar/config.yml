@@ -16,7 +16,9 @@ bar:
                     left-margin: 6
                     right-margin: 6
                     deco:
-                      underline: {size: 2, color: FFFFFFFF}
+                      stack:
+                        - background: {color: 303030FF}
+                        - underline: {size: 2, color: FFFFFFFF}
                 state == unfocused:
                   string:
                     text: "{name}"
