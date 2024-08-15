@@ -22,7 +22,7 @@
   console.useXkbConfig = true;
 
   environment.systemPackages = with pkgs; [
-    anki aria2 audacious
+    anki aria2 audacious axel
     btop
     chromium
     ffmpeg firefox
