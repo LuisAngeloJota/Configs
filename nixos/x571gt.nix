@@ -42,6 +42,7 @@
   ];
 
   fonts.packages = with pkgs; [
+    font-awesome
     inter
     jetbrains-mono
     noto-fonts
