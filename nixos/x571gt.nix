@@ -85,6 +85,8 @@
 
   powerManagement.cpuFreqGovernor = "performance";
 
+  programs.nix-ld.enable = true;
+
   security.rtkit.enable = true;
 
   services.nextdns.arguments = [
