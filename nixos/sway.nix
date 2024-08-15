@@ -21,6 +21,7 @@
     tesseract
     vulkan-validation-layers
     wl-clipboard
+    yambar
   ];
   programs.sway.wrapperFeatures.gtk = true;
 
