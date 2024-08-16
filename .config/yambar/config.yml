@@ -4,7 +4,7 @@ bar:
   foreground: FFFFFFFF
   background: 202020FF
   font: Inter Display Medium:pixelsize=14
-  left:
+  center:
     - i3:
         sort: ascending
         content:
@@ -52,7 +52,7 @@ bar:
                        - string:
                            text: "{cubic_volume}%"
                            left-margin: 6
-                           right-margin: 6
+                           right-margin: 18
                     muted:
                       - string:
                           text: ""
@@ -60,19 +60,19 @@ bar:
                       - string:
                           text: "{cubic_volume}%"
                           left-margin: 6
-                          right-margin: 6
+                          right-margin: 18
     - network:
         content:
           map:
             conditions:
               state == up:
                 - string:
-                    text: ""
+                    text: ""
                     font: Font Awesome 6:style=solid
                 - string:
-                    text: "{ssid}"
+                    text: "{name}: {ipv4}"
                     left-margin: 6
-                    right-margin: 6
+                    right-margin: 18
     - clock:
         date-format: "%Y-%m-%d"
         time-format: "%H:%M"
@@ -83,7 +83,7 @@ bar:
           - string:
               text: "{date}"
               left-margin: 6
-              right-margin: 6
+              right-margin: 18
           - string:
               text: ""
               font: Font Awesome 6:style=solid
