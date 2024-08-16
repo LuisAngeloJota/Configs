@@ -6,6 +6,7 @@ bar:
   font: Inter Display Medium:pixelsize=14
   left:
     - i3:
+        sort: ascending
         content:
           "":
             map:
