@@ -61,6 +61,16 @@ bar:
                           text: "{cubic_volume}%"
                           left-margin: 6
                           right-margin: 15
+    - backlight:
+        name: intel_backlight
+        content:
+          - string:
+              text: ""
+              font: Font Awesome 6:style=solid
+          - string:
+              text: "{percent}"
+              left-margin: 6
+              right-margin: 15
     - network:
         content:
           map:
