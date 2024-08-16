@@ -80,7 +80,7 @@ bar:
                     text: ""
                     font: Font Awesome 6:style=solid
                 - string:
-                    text: "{name}: {ipv4}"
+                    text: "{ipv4}"
                     left-margin: 6
                     right-margin: 15
     - clock:
