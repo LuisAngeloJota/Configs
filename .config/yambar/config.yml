@@ -30,6 +30,13 @@ bar:
                     text: "{name}"
                     left-margin: 6
                     right-margin: 6
+                state == urgent:
+                  string:
+                    text: "{name}"
+                    left-margin: 6
+                    right-margin: 6
+                    deco:
+                      background: {color: FF6961FF}
   right:
     - pipewire:
         content:
