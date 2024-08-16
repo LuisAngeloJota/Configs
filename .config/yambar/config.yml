@@ -65,9 +65,17 @@ bar:
         content:
           map:
             conditions:
-              state == up:
+              name == enp4s0:
                 - string:
                     text: ""
+                    font: Font Awesome 6:style=solid
+                - string:
+                    text: "{name}: {ipv4}"
+                    left-margin: 6
+                    right-margin: 15
+              name == wlan0:
+                - string:
+                    text: ""
                     font: Font Awesome 6:style=solid
                 - string:
                     text: "{name}: {ipv4}"
