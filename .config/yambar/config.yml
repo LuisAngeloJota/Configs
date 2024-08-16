@@ -50,9 +50,9 @@ bar:
                           text: ""
                           font: Font Awesome 6:style=solid
                       - string:
-                           text: "{cubic_volume}%"
-                           left-margin: 6
-                           right-margin: 6
+                          text: "{cubic_volume}%"
+                          left-margin: 6
+                          right-margin: 6
     - network:
         content:
           map:
