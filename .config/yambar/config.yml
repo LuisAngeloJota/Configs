@@ -68,7 +68,7 @@ bar:
               text: ""
               font: Font Awesome 6:style=solid
           - string:
-              text: "{percent}"
+              text: "{percent}%"
               left-margin: 6
               right-margin: 15
     - network:
