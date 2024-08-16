@@ -19,7 +19,7 @@ bar:
                     deco:
                       stack:
                         - background: {color: 303030FF}
-                        - underline: {size: 2, color: FFFFFFFF}
+                        - overline: {size: 2, color: FFFFFFFF}
                 state == unfocused:
                   string:
                     text: "{name}"
@@ -52,7 +52,7 @@ bar:
                        - string:
                            text: "{cubic_volume}%"
                            left-margin: 6
-                           right-margin: 18
+                           right-margin: 15
                     muted:
                       - string:
                           text: ""
@@ -60,7 +60,7 @@ bar:
                       - string:
                           text: "{cubic_volume}%"
                           left-margin: 6
-                          right-margin: 18
+                          right-margin: 15
     - network:
         content:
           map:
@@ -72,7 +72,7 @@ bar:
                 - string:
                     text: "{name}: {ipv4}"
                     left-margin: 6
-                    right-margin: 18
+                    right-margin: 15
     - clock:
         date-format: "%Y-%m-%d"
         time-format: "%H:%M"
@@ -83,7 +83,7 @@ bar:
           - string:
               text: "{date}"
               left-margin: 6
-              right-margin: 18
+              right-margin: 15
           - string:
               text: ""
               font: Font Awesome 6:style=solid
