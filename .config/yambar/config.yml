@@ -73,41 +73,41 @@ bar:
               right-margin: 15
     - battery:
         name: "BAT1"
-          content:
-            map:
-              conditions:
-                state == "discharging":
-                  - string:
-                      text: "\uebdc"
-                      font: Material Symbols Rounded:pixelsize=18:style=Medium
-                  - string:
-                      text: "{capacity}%"
-                      left-margin: 6
-                      right-margin: 15
-                state == "not charging":
-                  - string:
-                      text: "\uebdc"
-                      font: Material Symbols Rounded:pixelsize=18:style=Medium
-                  - string:
-                      text: "{capacity}%"
-                      left-margin: 6
-                      right-margin: 15
-                state == "full":
-                  - string:
-                      text: "\uebdc"
-                      font: Material Symbols Rounded:pixelsize=18:style=Medium
-                  - string:
-                      text: "{capacity}%"
-                      left-margin: 6
-                      right-margin: 15
-                state == "charging":
-                  - string:
-                      text: "\ue1a3"
-                      font: Material Symbols Rounded:pixelsize=18:style=Medium
-                  - string:
-                      text: "{capacity}%"
-                      left-margin: 6
-                      right-margin: 15
+        content:
+          map:
+            conditions:
+              state == "discharging":
+                - string:
+                    text: "\uebdc"
+                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                - string:
+                    text: "{capacity}%"
+                    left-margin: 6
+                    right-margin: 15
+              state == "not charging":
+                - string:
+                    text: "\uebdc"
+                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                - string:
+                    text: "{capacity}%"
+                    left-margin: 6
+                    right-margin: 15
+              state == "full":
+                - string:
+                    text: "\uebdc"
+                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                - string:
+                    text: "{capacity}%"
+                    left-margin: 6
+                    right-margin: 15
+              state == "charging":
+                - string:
+                    text: "\ue1a3"
+                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                - string:
+                    text: "{capacity}%"
+                    left-margin: 6
+                    right-margin: 15
     - network:
         content:
           map:
