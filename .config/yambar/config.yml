@@ -48,7 +48,7 @@ bar:
                     ~muted:
                        - string:
                            text: "\ue050"
-                           font: Material Symbols Rounded:pixelsize=18:style=Medium
+                           font: Material Symbols Rounded:pixelsize=16:style=Medium
                        - string:
                            text: "{cubic_volume}%"
                            left-margin: 6
@@ -56,7 +56,7 @@ bar:
                     muted:
                       - string:
                           text: "\ue04f"
-                          font: Material Symbols Rounded:pixelsize=18:style=Medium
+                          font: Material Symbols Rounded:pixelsize=16:style=Medium
                       - string:
                           text: "{cubic_volume}%"
                           left-margin: 6
@@ -66,7 +66,7 @@ bar:
         content:
           - string:
               text: "\ue518"
-              font: Material Symbols Rounded:pixelsize=18:style=Medium
+              font: Material Symbols Rounded:pixelsize=16:style=Medium
           - string:
               text: "{percent}%"
               left-margin: 6
@@ -79,7 +79,7 @@ bar:
               state == "discharging":
                 - string:
                     text: "\uebdc"
-                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                    font: Material Symbols Rounded:pixelsize=16:style=Medium
                 - string:
                     text: "{capacity}%"
                     left-margin: 6
@@ -87,7 +87,7 @@ bar:
               state == "not charging":
                 - string:
                     text: "\uebdc"
-                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                    font: Material Symbols Rounded:pixelsize=16:style=Medium
                 - string:
                     text: "{capacity}%"
                     left-margin: 6
@@ -95,7 +95,7 @@ bar:
               state == "full":
                 - string:
                     text: "\uebdc"
-                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                    font: Material Symbols Rounded:pixelsize=16:style=Medium
                 - string:
                     text: "{capacity}%"
                     left-margin: 6
@@ -103,7 +103,7 @@ bar:
               state == "charging":
                 - string:
                     text: "\ue1a3"
-                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                    font: Material Symbols Rounded:pixelsize=16:style=Medium
                 - string:
                     text: "{capacity}%"
                     left-margin: 6
@@ -115,7 +115,7 @@ bar:
               name == "wlan0":
                 - string:
                     text: "\ue63e"
-                    font: Material Symbols Rounded:pixelsize=18:style=Medium
+                    font: Material Symbols Rounded:pixelsize=16:style=Medium
                 - string:
                     text: "{ipv4}"
                     left-margin: 6
@@ -126,14 +126,14 @@ bar:
         content:
           - string:
               text: "\ue8df"
-              font: Material Symbols Rounded:pixelsize=18:style=Medium
+              font: Material Symbols Rounded:pixelsize=16:style=Medium
           - string:
               text: "{date}"
               left-margin: 6
               right-margin: 15
           - string:
               text: "\ue8b5"
-              font: Material Symbols Rounded:pixelsize=18:style=Medium
+              font: Material Symbols Rounded:pixelsize=16:style=Medium
           - string:
               text: "{time}"
               left-margin: 6
