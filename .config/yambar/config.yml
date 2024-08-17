@@ -3,7 +3,7 @@ bar:
   location: top
   foreground: FFFFFFFF
   background: 202020FF
-  font: Inter Display:style=medium:pixelsize=14
+  font: Inter Display:pixelsize=14:style=Medium
   center:
     - i3:
         sort: ascending
@@ -47,16 +47,16 @@ bar:
                   conditions:
                     ~muted:
                        - string:
-                           text: ""
-                           font: Font Awesome 6:style=solid
+                           text: "\ue050"
+                           font: Material Symbols Rounded:pixelsize=18:style=Medium
                        - string:
                            text: "{cubic_volume}%"
                            left-margin: 6
                            right-margin: 15
                     muted:
                       - string:
-                          text: ""
-                          font: Font Awesome 6:style=solid
+                          text: "\ue04f"
+                          font: Material Symbols Rounded:pixelsize=18:style=Medium
                       - string:
                           text: "{cubic_volume}%"
                           left-margin: 6
@@ -65,8 +65,8 @@ bar:
         name: intel_backlight
         content:
           - string:
-              text: ""
-              font: Font Awesome 6:style=solid
+              text: "\ue518"
+              font: Material Symbols Rounded:pixelsize=18:style=Medium
           - string:
               text: "{percent}%"
               left-margin: 6
@@ -77,8 +77,8 @@ bar:
             conditions:
               name == wlan0:
                 - string:
-                    text: ""
-                    font: Font Awesome 6:style=solid
+                    text: "\ue63e"
+                    font: Material Symbols Rounded:pixelsize=18:style=Medium
                 - string:
                     text: "{ipv4}"
                     left-margin: 6
@@ -88,15 +88,15 @@ bar:
         time-format: "%H:%M"
         content:
           - string:
-              text: ""
-              font: Font Awesome 6:style=solid
+              text: "\ue8df"
+              font: Material Symbols Rounded:pixelsize=18:style=Medium
           - string:
               text: "{date}"
               left-margin: 6
               right-margin: 15
           - string:
-              text: ""
-              font: Font Awesome 6:style=solid
+              text: "\ue8b5"
+              font: Material Symbols Rounded:pixelsize=18:style=Medium
           - string:
               text: "{time}"
               left-margin: 6
