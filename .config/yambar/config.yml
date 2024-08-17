@@ -11,7 +11,7 @@ bar:
           "":
             map:
               conditions:
-                state == focused:
+                state == "focused":
                   string:
                     text: "{name}"
                     left-margin: 6
@@ -20,17 +20,17 @@ bar:
                       stack:
                         - background: {color: 303030FF}
                         - overline: {size: 2, color: FFFFFFFF}
-                state == unfocused:
+                state == "unfocused":
                   string:
                     text: "{name}"
                     left-margin: 6
                     right-margin: 6
-                state == invisible:
+                state == "invisible":
                   string:
                     text: "{name}"
                     left-margin: 6
                     right-margin: 6
-                state == urgent:
+                state == "urgent":
                   string:
                     text: "{name}"
                     left-margin: 6
@@ -62,7 +62,7 @@ bar:
                           left-margin: 6
                           right-margin: 15
     - backlight:
-        name: intel_backlight
+        name: "intel_backlight"
         content:
           - string:
               text: "\ue518"
@@ -71,11 +71,48 @@ bar:
               text: "{percent}%"
               left-margin: 6
               right-margin: 15
+    - battery:
+        name: "BAT1"
+          content:
+            map:
+              conditions:
+                state == "discharging":
+                  - string:
+                      text: "\uebdc"
+                      font: Material Symbols Rounded:pixelsize=18:style=Medium
+                  - string:
+                      text: "{capacity}%"
+                      left-margin: 6
+                      right-margin: 15
+                state == "not charging":
+                  - string:
+                      text: "\uebdc"
+                      font: Material Symbols Rounded:pixelsize=18:style=Medium
+                  - string:
+                      text: "{capacity}%"
+                      left-margin: 6
+                      right-margin: 15
+                state == "full":
+                  - string:
+                      text: "\uebdc"
+                      font: Material Symbols Rounded:pixelsize=18:style=Medium
+                  - string:
+                      text: "{capacity}%"
+                      left-margin: 6
+                      right-margin: 15
+                state == "charging":
+                  - string:
+                      text: "\ue1a3"
+                      font: Material Symbols Rounded:pixelsize=18:style=Medium
+                  - string:
+                      text: "{capacity}%"
+                      left-margin: 6
+                      right-margin: 15
     - network:
         content:
           map:
             conditions:
-              name == wlan0:
+              name == "wlan0":
                 - string:
                     text: "\ue63e"
                     font: Material Symbols Rounded:pixelsize=18:style=Medium
