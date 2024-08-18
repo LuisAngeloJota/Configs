@@ -52,6 +52,10 @@ bar:
                        - string:
                            text: "\ue050"
                            font: Material Symbols Rounded:pixelsize=16:style=Medium
+                           on-click:
+                             left: "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+                             wheel-up: "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"
+                             wheel-down: "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
                        - string:
                            text: "{cubic_volume}%"
                            left-margin: 6
@@ -60,6 +64,10 @@ bar:
                       - string:
                           text: "\ue04f"
                           font: Material Symbols Rounded:pixelsize=16:style=Medium
+                          on-click:
+                             left: "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+                             wheel-up: "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"
+                             wheel-down: "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
                       - string:
                           text: "{cubic_volume}%"
                           left-margin: 6
@@ -70,6 +78,9 @@ bar:
           - string:
               text: "\ue518"
               font: Material Symbols Rounded:pixelsize=16:style=Medium
+              on-click:
+                wheel-up: "brightnessctl set 2%+"
+                wheel-down: "brightnessctl set 2%-"
           - string:
               text: "{percent}%"
               left-margin: 6
