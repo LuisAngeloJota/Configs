@@ -3,7 +3,7 @@ bar:
   location: top
   foreground: FFFFFFFF
   background: 202020FF
-  font: Inter Display:pixelsize=14:style=Medium
+  font: Inter:pixelsize=14:style=Medium
   center:
     - i3:
         sort: ascending
