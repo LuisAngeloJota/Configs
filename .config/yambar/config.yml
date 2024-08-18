@@ -20,7 +20,6 @@ bar:
                       stack:
                         - background: {color: 303030FF}
                         - overline: {size: 2, color: FFFFFFFF}
-                    on-click: "swaymsg --quiet workspace {name}"
                 state == "unfocused":
                   string:
                     text: "{name}"
