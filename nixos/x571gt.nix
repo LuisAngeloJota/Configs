@@ -41,6 +41,15 @@
     yt-dlp
   ];
 
+  fonts.fontconfig.defaultFonts.sansSerif = [
+    "Inter"
+  ];
+  fonts.fontconfig.defaultFonts.serif = [
+    "Noto Serif"
+  ];
+  fonts.fontconfig.defaultFonts.sansSerif = [
+    "JetBrains Mono"
+  ];
   fonts.packages = with pkgs; [
     material-symbols
     inter
