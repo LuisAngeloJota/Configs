@@ -51,7 +51,7 @@ bar:
                     ~muted:
                        - string:
                            text: "\ue050"
-                           font: Material Symbols Rounded:style=Medium:pixelsize=16
+                           font: Material Symbols Rounded:style=Medium:pixelsize=14
                            on-click:
                              left: "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
                              wheel-up: "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"
@@ -63,7 +63,7 @@ bar:
                     muted:
                       - string:
                           text: "\ue04f"
-                          font: Material Symbols Rounded:style=Medium:pixelsize=16
+                          font: Material Symbols Rounded:style=Medium:pixelsize=14
                           on-click:
                              left: "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
                              wheel-up: "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"
@@ -77,7 +77,7 @@ bar:
         content:
           - string:
               text: "\ue518"
-              font: Material Symbols Rounded:style=Medium:pixelsize=16
+              font: Material Symbols Rounded:style=Medium:pixelsize=14
               on-click:
                 wheel-up: "brightnessctl set 2%+"
                 wheel-down: "brightnessctl set 2%-"
@@ -93,7 +93,7 @@ bar:
               state == "discharging":
                 - string:
                     text: "\uebdc"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=16
+                    font: Material Symbols Rounded:style=Medium:pixelsize=14
                 - string:
                     text: "{capacity}%"
                     left-margin: 6
@@ -101,7 +101,7 @@ bar:
               state == "not charging":
                 - string:
                     text: "\uebdc"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=16
+                    font: Material Symbols Rounded:style=Medium:pixelsize=14
                 - string:
                     text: "{capacity}%"
                     left-margin: 6
@@ -109,7 +109,7 @@ bar:
               state == "full":
                 - string:
                     text: "\uebdc"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=16
+                    font: Material Symbols Rounded:style=Medium:pixelsize=14
                 - string:
                     text: "{capacity}%"
                     left-margin: 6
@@ -117,7 +117,7 @@ bar:
               state == "charging":
                 - string:
                     text: "\ue1a3"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=16
+                    font: Material Symbols Rounded:style=Medium:pixelsize=14
                 - string:
                     text: "{capacity}%"
                     left-margin: 6
@@ -129,7 +129,7 @@ bar:
               name == "wlan0":
                 - string:
                     text: "\ue63e"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=16
+                    font: Material Symbols Rounded:style=Medium:pixelsize=14
                 - string:
                     text: "{ipv4}"
                     left-margin: 6
@@ -140,14 +140,14 @@ bar:
         content:
           - string:
               text: "\ue8df"
-              font: Material Symbols Rounded:style=Medium:pixelsize=16
+              font: Material Symbols Rounded:style=Medium:pixelsize=14
           - string:
               text: "{date}"
               left-margin: 6
               right-margin: 15
           - string:
               text: "\ue8b5"
-              font: Material Symbols Rounded:style=Medium:pixelsize=16
+              font: Material Symbols Rounded:style=Medium:pixelsize=14
           - string:
               text: "{time}"
               left-margin: 6
