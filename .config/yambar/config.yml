@@ -58,7 +58,7 @@ bar:
                              wheel-down: "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
                        - string:
                            text: "{cubic_volume}%"
-                           left-margin: 6
+                           left-margin: 3
                            right-margin: 15
                     muted:
                       - string:
@@ -70,7 +70,7 @@ bar:
                              wheel-down: "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
                       - string:
                           text: "{cubic_volume}%"
-                          left-margin: 6
+                          left-margin: 3
                           right-margin: 15
     - backlight:
         name: "intel_backlight"
@@ -83,7 +83,7 @@ bar:
                 wheel-down: "brightnessctl set 2%-"
           - string:
               text: "{percent}%"
-              left-margin: 6
+              left-margin: 3
               right-margin: 15
     - battery:
         name: "BAT1"
@@ -96,7 +96,7 @@ bar:
                     font: Material Symbols Rounded:style=Medium:pixelsize=18
                 - string:
                     text: "{capacity}%"
-                    left-margin: 6
+                    left-margin: 3
                     right-margin: 15
               state == "not charging":
                 - string:
@@ -104,7 +104,7 @@ bar:
                     font: Material Symbols Rounded:style=Medium:pixelsize=18
                 - string:
                     text: "{capacity}%"
-                    left-margin: 6
+                    left-margin: 3
                     right-margin: 15
               state == "full":
                 - string:
@@ -112,7 +112,7 @@ bar:
                     font: Material Symbols Rounded:style=Medium:pixelsize=18
                 - string:
                     text: "{capacity}%"
-                    left-margin: 6
+                    left-margin: 3
                     right-margin: 15
               state == "charging":
                 - string:
@@ -120,7 +120,7 @@ bar:
                     font: Material Symbols Rounded:style=Medium:pixelsize=18
                 - string:
                     text: "{capacity}%"
-                    left-margin: 6
+                    left-margin: 3
                     right-margin: 15
     - network:
         content:
@@ -132,7 +132,7 @@ bar:
                     font: Material Symbols Rounded:style=Medium:pixelsize=18
                 - string:
                     text: "{ipv4}"
-                    left-margin: 6
+                    left-margin: 3
                     right-margin: 15
     - clock:
         date-format: "%Y-%m-%d"
@@ -143,12 +143,12 @@ bar:
               font: Material Symbols Rounded:style=Medium:pixelsize=18
           - string:
               text: "{date}"
-              left-margin: 6
+              left-margin: 3
               right-margin: 15
           - string:
               text: "\ue8b5"
               font: Material Symbols Rounded:style=Medium:pixelsize=18
           - string:
               text: "{time}"
-              left-margin: 6
+              left-margin: 3
               right-margin: 6
