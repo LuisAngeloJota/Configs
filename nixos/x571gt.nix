@@ -47,7 +47,7 @@
   fonts.fontconfig.defaultFonts.serif = [
     "Noto Serif"
   ];
-  fonts.fontconfig.defaultFonts.sansSerif = [
+  fonts.fontconfig.defaultFonts.monospace = [
     "JetBrains Mono"
   ];
   fonts.packages = with pkgs; [
