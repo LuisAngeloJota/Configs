@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  # Base
   imports = [
     ./bundle.nix
     ./hardware-configuration.nix
@@ -20,26 +21,6 @@
   boot.loader.systemd-boot.enable = true;
 
   console.useXkbConfig = true;
-
-  environment.systemPackages = with pkgs; [
-    anki aria2 audacious
-    btop
-    chromium
-    ffmpeg firefox
-    git
-    handbrake
-    imagemagick
-    libarchive libreoffice-fresh localsend
-    mediainfo mpv
-    obs-studio
-    protonup-qt
-    rsync
-    shotcut streamlink streamrip
-    ventoy
-    wireguard-tools
-    qpwgraph
-    yt-dlp
-  ];
 
   fonts.fontconfig.defaultFonts.sansSerif = [
     "Inter"
@@ -125,4 +106,111 @@
   users.users.la.initialPassword = "la";
 
   zramSwap.enable = true;
+
+  # Applications
+  environment.systemPackages = with pkgs; [
+    anki aria2 audacious
+    btop
+    chromium
+    ffmpeg firefox
+    git
+    handbrake
+    imagemagick
+    libarchive libreoffice-fresh localsend
+    mediainfo mpv
+    obs-studio
+    protonup-qt
+    rsync
+    shotcut streamlink streamrip
+    ventoy
+    wireguard-tools
+    qpwgraph
+    yt-dlp
+  ];
+
+  # Appimages
+  programs.appimage.binfmt = true;
+  programs.appimage.enable = true;
+
+  # Gaming
+  environment.systemPackages = with pkgs; [
+    bottles
+    mangohud
+  ];
+
+  hardware.graphics.enable32Bit = true;
+
+  programs.gamemode.enable = true;
+  programs.steam.enable = true;
+
+  # iDevice Tools
+  environment.systemPackages = with pkgs; [
+    idevicerestore
+    ifuse
+    libimobiledevice
+  ];
+
+  services.usbmuxd.enable = true;
+
+  # Sway
+  environment.sessionVariables = {
+    GTK_THEME = "Adwaita:dark";
+    NIXOS_OZONE_WL = "1";
+    WLR_RENDERER = "vulkan";
+  };
+
+  programs.sway.enable = true;
+  programs.sway.extraOptions = [
+    "--unsupported-gpu"
+  ];
+  programs.sway.extraPackages = with pkgs; [
+    brightnessctl
+    foot fuzzel
+    glib adwaita-icon-theme grim
+    libnotify
+    mako
+    playerctl
+    slurp swaybg swayidle swaylock
+    tesseract
+    vulkan-validation-layers
+    wl-clipboard
+    yambar
+  ];
+  programs.sway.wrapperFeatures.gtk = true;
+
+  xdg.portal.extraPortals = with pkgs; [
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
+  ];
+
+  # Thunar
+  programs.thunar.enable = true;
+
+  security.polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+        if (subject.isInGroup("wheel") && action.id == "org.freedesktop.udisks2.filesystem-mount-system")
+            return polkit.Result.YES;
+    });
+  '';
+
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+
+  # Uxplay
+  environment.systemPackages = with pkgs; [
+    uxplay
+  ];
+
+  services.avahi.enable = true;
+  services.avahi.publish.enable = true;
+  services.avahi.publish.userServices = true;
+
+  # Virt Manager
+  programs.virt-manager.enable = true;
+
+  users.users.la.extraGroups = [
+    "libvirtd"
+  ];
+
+  virtualisation.libvirtd.enable = true;
 }
