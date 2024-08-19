@@ -42,7 +42,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    font-awesome
+    material-symbols
     inter
     jetbrains-mono
     noto-fonts
