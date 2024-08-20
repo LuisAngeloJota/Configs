@@ -19,7 +19,6 @@ bar:
                     deco:
                       stack:
                         - background: {color: 303030FF}
-                        - overline: {size: 2, color: FFFFFFFF}
                 state == "unfocused":
                   string:
                     text: "{name}"
