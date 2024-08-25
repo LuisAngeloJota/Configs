@@ -25,6 +25,13 @@
   ];
   programs.sway.wrapperFeatures.gtk = true;
 
+  services.greetd.enable = true;
+  services.greetd.settings = {
+    default_session {
+      command = "${pkgs.greetd.greetd}/bin/agreety --cmd sway";
+    };
+  };
+
   xdg.portal.extraPortals = with pkgs; [
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
