@@ -35,7 +35,7 @@
     protonup-qt
     rsync
     shotcut streamlink streamrip
-    ventoy
+    ventoy vscode-fhs
     wireguard-tools
     qpwgraph
     yt-dlp
