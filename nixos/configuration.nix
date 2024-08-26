@@ -91,8 +91,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.auto-optimise-store = true;
-
   powerManagement.cpuFreqGovernor = "performance";
 
   programs.nix-ld.enable = true;
