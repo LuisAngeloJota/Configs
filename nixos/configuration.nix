@@ -91,8 +91,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  powerManagement.cpuFreqGovernor = "performance";
-
   programs.nix-ld.enable = true;
 
   security.rtkit.enable = true;
