@@ -48,7 +48,7 @@
     "Noto Serif"
   ];
   fonts.fontconfig.defaultFonts.monospace = [
-    "JetBrains Mono"
+    "JetBrains Mono NL"
   ];
   fonts.packages = with pkgs; [
     material-symbols
