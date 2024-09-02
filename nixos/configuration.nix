@@ -6,7 +6,6 @@
   ];
   system.stateVersion = "24.11";
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "mitigations=off"
   ];
