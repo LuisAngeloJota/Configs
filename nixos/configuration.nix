@@ -109,8 +109,9 @@
   services.xserver.videoDrivers = [
     "nvidia"
   ];
-  services.xserver.xkb.layout = "us";
-  services.xserver.xkb.variant = "colemak_dh";
+  services.xserver.xkb.layout = "us,us";
+  services.xserver.xkb.variant = "colemak_dh,";
+  services.xserver.xkb.options = "grp:shift_caps_toggle";
 
   time.timeZone = "Asia/Manila";
 
