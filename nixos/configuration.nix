@@ -69,6 +69,7 @@
   hardware.graphics.extraPackages = with pkgs; [
     intel-compute-runtime
     intel-media-driver
+    vpl-gpu-rt
   ];
 
   i18n.defaultLocale = "en_US.UTF-8";
