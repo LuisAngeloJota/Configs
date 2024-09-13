@@ -101,6 +101,7 @@
     add-cpe-id = "a96f8b";
     bogus-priv = true;
     cache-size = 10000;
+    no-resolv = true;
     server = [
       "2a07:a8c0::"
       "45.90.28.0"
