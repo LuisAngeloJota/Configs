@@ -96,11 +96,17 @@
 
   security.rtkit.enable = true;
 
-  services.nextdns.arguments = [
-    "-config"
-    "a96f8b"
-  ];
-  services.nextdns.enable = true;
+  services.dnsmasq.enable = true;
+  services.dnsmasq.settings = {
+    add-cpe-id = "a96f8b";
+    bogus-priv = true;
+    cache-size = 10000;
+    server = [
+      "2a07:a8c0::"
+      "45.90.28.0"
+    ];
+    strict-order = true;
+  };
   services.pipewire.alsa.enable = true;
   services.pipewire.enable = true;
   services.pipewire.jack.enable = true;
