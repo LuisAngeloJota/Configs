@@ -1,6 +1,10 @@
 # Modifier key (Mod1 = Left Alt)
 set $mod Mod1
 
+# Monitors
+output eDP-1 disable
+output HDMI-A-1 mode 1920x1080@120.000hz
+
 # Wallpaper
 output * bg ~/.config/sway/background.png fill
 
