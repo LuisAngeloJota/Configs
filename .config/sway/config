@@ -8,9 +8,6 @@ output HDMI-A-1 mode 1920x1080@120.000hz
 # Wallpaper
 output * bg ~/.config/sway/background.png fill
 
-# Idle management
-exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
-
 # Application launcher
 bindsym $mod+Space exec fuzzel | xargs swaymsg exec --
 
@@ -98,9 +95,6 @@ bindsym $mod+r mode "resize"
 
 # Disable window focus on mouse hover
 focus_follows_mouse no
-
-# Inhibit idle on current workspace while fullscreen
-for_window [workspace="__focused__"] inhibit_idle fullscreen
 
 # Brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
