@@ -1,5 +1,4 @@
 bar:
-  monitor: HDMI-A-1
   height: 24
   location: top
   foreground: FFFFFFFF
@@ -72,19 +71,6 @@ bar:
                           text: "{cubic_volume}%"
                           left-margin: 3
                           right-margin: 15
-    - backlight:
-        name: "intel_backlight"
-        content:
-          - string:
-              text: "\ue1ae"
-              font: Material Symbols Rounded:style=Medium:pixelsize=18
-              on-click:
-                wheel-up: "brightnessctl set 2%+"
-                wheel-down: "brightnessctl set 2%-"
-          - string:
-              text: "{percent}%"
-              left-margin: 3
-              right-margin: 15
     - battery:
         name: "BAT1"
         content:
