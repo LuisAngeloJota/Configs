@@ -94,6 +94,7 @@
 
   programs.nix-ld.enable = true;
 
+  security.polkit.enable = true;
   security.rtkit.enable = true;
 
   services.dnsmasq.enable = true;
