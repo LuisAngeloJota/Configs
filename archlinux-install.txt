@@ -34,7 +34,7 @@ echo "archlinux" > /etc/hostname
 
 # Users
 passwd root
-useradd -m -G libvirt,wheel la
+useradd -m -G wheel la
 passwd la
 EDITOR=nano visudo # Uncomment %wheel ALL=(ALL:ALL) ALL
 
