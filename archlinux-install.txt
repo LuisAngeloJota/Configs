@@ -13,7 +13,7 @@ mount /dev/root_partition /mnt
 mount --mkdir /dev/boot_partition /mnt boot
 
 # Install essential packages
-pacstrap -K /mnt base base-devel intel-ucode iwd linux linux-firmware linux-headers nano sudo
+pacstrap -K /mnt base base-devel git intel-ucode iwd linux linux-firmware linux-headers nano sudo
 
 # Fstab
 genfstab -U /mnt >> /mnt/etc/fstab
