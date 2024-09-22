@@ -17,7 +17,7 @@ paru -S adwaita-cursors adwaita-icon-theme aria2 audacious \
             ifuse imagemagick intel-compute-runtime intel-media-driver inter-font iptables-nft iwd \
             libarchive libnotify libreoffice-fresh libvirt \
             mako mangohud mediainfo mpv \
-            noto-fonts noto-fonts-cjk noto-fonts-emoji nvidia-open \
+            noto-fonts noto-fonts-cjk noto-fonts-emoji nvidia-open nvidia-prime \
             obs-studio otf-font-awesome \
             pipewire pipewire-alsa pipewire-jack pipewire-pulse playerctl power-profiles-daemon \
             qpwgraph \
