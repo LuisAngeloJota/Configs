@@ -1,18 +1,11 @@
 #!/bin/bash
-pacman -Syu
-
-pacman -S git
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-
-paru -S adwaita-cursors adwaita-icon-theme aria2 audacious \
+sudo pacman -S adwaita-cursors adwaita-icon-theme aria2 audacious \
             bluez bluez-utils btop \
             chromium code cups \
             dnsmasq \
             edk2-ovmf \
             ffmpeg firefox flatpak foot fuzzel \
-            gamemode glib2 greetd grim gvfs \
+            gamemode git glib2 greetd grim gvfs \
             handbrake \
             ifuse imagemagick intel-compute-runtime intel-media-driver inter-font iptables-nft iwd \
             libarchive libnotify libreoffice-fresh libvirt \
@@ -24,24 +17,16 @@ paru -S adwaita-cursors adwaita-icon-theme aria2 audacious \
             rsync rtkit \
             shotcut slurp steam streamlink sway swaybg \
             tesseract thunar ttf-jetbrains-mono tumbler \
-            uxplay \
             virt-manager vpl-gpu-rt vulkan-validation-layers \
             wireguard-tools wireplumber wl-clipboard \
             xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
-            yambar yt-dlp \
+            yt-dlp \
             zram-generator
 
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+paru -S uxplay yambar
 
 flatpak install flathub net.ankiweb.Anki org.localsend.localsend_app net.davidotek.pupgui2
-
-sudo systemctl enable bluetooth.service
-sudo systemctl enable cups.service
-sudo systemctl enable greetd.service
-sudo systemctl enable libvirtd.service
-sudo systemctl enable libvirtd.socket
-sudo systemctl enable power-profiles-daemon.service
-sudo systemctl enable rtkit-daemon.service
-sudo systemctl enable systemd-networkd.service
-sudo systemctl enable systemd-resolved.service
-sudo systemctl enable systemd-timesyncd.service
-sudo systemctl enable systemd-zram-setup@zram0.service
