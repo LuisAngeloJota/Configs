@@ -1,5 +1,11 @@
 #!/bin/bash
-ln -sf /run/systemd/resolve/stub-resolve.conf /etc/resolv.conf
+sudo ln -sf /run/systemd/resolve/stub-resolve.conf /etc/resolv.conf
+
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+paru -S uxplay yambar
 
 sudo pacman -S adwaita-cursors adwaita-icon-theme aria2 audacious \
             bluez bluez-utils btop \
@@ -24,12 +30,6 @@ sudo pacman -S adwaita-cursors adwaita-icon-theme aria2 audacious \
             xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
             yt-dlp \
             zram-generator
-
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-
-paru -S uxplay yambar
 
 sudo systemctl enable bluetooth.service
 sudo systemctl enable cups.service
