@@ -1,4 +1,5 @@
 systemctl enable iwd.service
+systemctl enable systemd-networkd.service
 systemctl enable systemd-resolved.service
 systemctl enable systemd-timesyncd.service
 
