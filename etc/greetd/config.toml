@@ -1,2 +1,2 @@
 [default_session]
-command = "agreety --cmd sway"
+command = "agreety --cmd sway --unsupported-gpu"
