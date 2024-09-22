@@ -36,3 +36,4 @@ sudo systemctl enable libvirtd.service
 sudo systemctl enable libvirtd.socket
 sudo systemctl enable power-profiles-daemon.service
 sudo systemctl enable rtkit-daemon.service
+sudo systemctl enable systemd-zram-setup@zram0.service
