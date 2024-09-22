@@ -1,4 +1,6 @@
 #!/bin/bash
+cp -ir .config $HOME
+
 sudo ln -sf /run/systemd/resolve/stub-resolve.conf /etc/resolv.conf
 
 git clone https://aur.archlinux.org/paru.git
