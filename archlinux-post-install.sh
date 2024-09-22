@@ -34,8 +34,11 @@ paru -S adwaita-cursors adwaita-icon-theme aria2 audacious \
 flatpak install flathub net.ankiweb.Anki org.localsend.localsend_app net.davidotek.pupgui2
 
 systemctl enable bluetooth.service
+systemctl enable cups.service
 systemctl enable libvirtd.service
 systemctl enable libvirtd.socket
+systemctl enable power-profiles-daemon.service
 systemctl enable rtkit-daemon.service
 systemctl enable systemd-networkd.service
 systemctl enable systemd-resolved.service
+systemctl enable systemd-timesyncd.service
