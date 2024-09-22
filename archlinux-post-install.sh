@@ -1,4 +1,6 @@
 #!/bin/bash
+ln -sf /run/systemd/resolve/stub-resolve.conf /etc/resolv.conf
+
 sudo pacman -S adwaita-cursors adwaita-icon-theme aria2 audacious \
             bluez bluez-utils btop \
             chromium code cups \
