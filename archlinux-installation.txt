@@ -1,0 +1,42 @@
+# Connect to the internet using Wi-Fi
+$ iwctl
+
+# Partition disks
+$ fdisk
+
+# Format the partitions
+$ mkfs.fat -F 32 /dev/boot_partition
+$ mkfs.xfs /dev/root_partition
+
+# Mount the file systems
+$ mount /dev/root_partition /mnt
+$ mount --mkdir /dev/boot_partition /mnt boot
+
+# Install essential packages
+$ pacstrap -K /mnt base base-devel git greetd intel-ucode linux linux-firmware linux-headers nano sudo sway swaybg
+
+# Fstab
+$ genfstab -U /mnt >> /mnt/etc/fstab
+
+# Chroot
+$ arch-chroot /mnt
+
+# Time
+$ ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
+$ hwclock --systohc
+
+# Localization
+$ nano /etc/locale.gen # Uncomment en_US.UTF-8 UTF-8
+$ echo "LANG=en_US.UTF-8" > /etc/locale.conf
+
+# Network configuration
+$ echo "archlinux" > /etc/hostname
+
+# Users
+$ passwd root
+$ useradd -m -G wheel la
+$ passwd la
+$ EDITOR=nano visudo # Uncomment %wheel ALL=(ALL:ALL) ALL
+
+# Bootloader
+$ bootctl install
