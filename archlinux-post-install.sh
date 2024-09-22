@@ -29,4 +29,10 @@ makepkg -si
 
 paru -S uxplay yambar
 
-flatpak install flathub net.ankiweb.Anki org.localsend.localsend_app net.davidotek.pupgui2
+sudo systemctl enable bluetooth.service
+sudo systemctl enable cups.service
+sudo systemctl enable greetd.service
+sudo systemctl enable libvirtd.service
+sudo systemctl enable libvirtd.socket
+sudo systemctl enable power-profiles-daemon.service
+sudo systemctl enable rtkit-daemon.service
