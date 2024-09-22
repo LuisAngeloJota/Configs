@@ -3,7 +3,7 @@
   programs.virt-manager.enable = true;
 
   users.users.la.extraGroups = [
-    "libvirtd"
+    "libvirt"
   ];
 
   virtualisation.libvirtd.enable = true;
