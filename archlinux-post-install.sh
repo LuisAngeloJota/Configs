@@ -31,14 +31,17 @@ paru -S adwaita-cursors adwaita-icon-theme aria2 audacious \
             yambar yt-dlp \
             zram-generator
 
+
 flatpak install flathub net.ankiweb.Anki org.localsend.localsend_app net.davidotek.pupgui2
 
-systemctl enable bluetooth.service
-systemctl enable cups.service
-systemctl enable libvirtd.service
-systemctl enable libvirtd.socket
-systemctl enable power-profiles-daemon.service
-systemctl enable rtkit-daemon.service
-systemctl enable systemd-networkd.service
-systemctl enable systemd-resolved.service
-systemctl enable systemd-timesyncd.service
+sudo systemctl enable bluetooth.service
+sudo systemctl enable cups.service
+sudo systemctl enable greetd.service
+sudo systemctl enable libvirtd.service
+sudo systemctl enable libvirtd.socket
+sudo systemctl enable power-profiles-daemon.service
+sudo systemctl enable rtkit-daemon.service
+sudo systemctl enable systemd-networkd.service
+sudo systemctl enable systemd-resolved.service
+sudo systemctl enable systemd-timesyncd.service
+sudo systemctl enable systemd-zram-setup@zram0.service
