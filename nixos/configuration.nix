@@ -98,6 +98,7 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
+  services.logind.lidSwitch = "ignore";
   services.nextdns.arguments = [
     "-profile" "a96f8b"
     "-cache-size" "10MB"
