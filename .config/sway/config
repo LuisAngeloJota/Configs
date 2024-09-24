@@ -9,6 +9,9 @@ output HDMI-A-1 mode 1920x1080@120.000hz
 
 workspace 1 output HDMI-A-1
 
+# Idle management
+exec swayidle -w timeout 60 'swaymsg "output * power off"; pkill -x yambar' resume 'swaymsg "output * power on"; yambar &'
+
 # Wallpaper
 output * bg ~/.config/sway/background.png fill
 
