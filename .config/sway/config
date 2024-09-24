@@ -2,7 +2,9 @@
 set $mod Mod1
 
 # Monitors
-output eDP-1 disable
+bindswitch --reload --locked lid:on output eDP-1 disable
+bindswitch --reload --locked lid:off output eDP-1 enable
+
 output HDMI-A-1 mode 1920x1080@120.000hz
 
 # Wallpaper
