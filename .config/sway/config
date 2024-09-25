@@ -159,7 +159,9 @@ default_border pixel 1
 default_floating_border pixel 1
 
 # Status bar
-exec_always yambar
+exec yambar
+
+bindsym $mod+b exec pkill -x yambar || yambar &
 
 # Imports
 include /etc/sway/config.d/*
