@@ -4,7 +4,7 @@ bar:
   foreground: FFFFFFFF
   background: 202020FF
   font: Inter:style=Medium:pixelsize=14
-  center:
+  left:
     - i3:
         sort: ascending
         content:
