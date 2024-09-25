@@ -51,7 +51,7 @@
     "JetBrains Mono NL"
   ];
   fonts.packages = with pkgs; [
-    material-symbols
+    font-awesome
     inter
     jetbrains-mono
     noto-fonts
