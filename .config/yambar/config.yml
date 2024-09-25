@@ -3,7 +3,7 @@ bar:
   location: top
   foreground: FFFFFFFF
   background: 202020FF
-  font: Inter:style=Medium:pixelsize=14
+  font: Inter:style=Medium:pixelsize=12
   left:
     - i3:
         sort: ascending
@@ -49,8 +49,8 @@ bar:
                   conditions:
                     ~muted:
                        - string:
-                           text: "\ue050"
-                           font: Material Symbols Rounded:style=Medium:pixelsize=18
+                           text: "\uf028"
+                           font: Font Awesome 6 Free:pixelsize=12
                            on-click:
                              left: "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
                              wheel-up: "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"
@@ -61,8 +61,8 @@ bar:
                            right-margin: 15
                     muted:
                       - string:
-                          text: "\ue04f"
-                          font: Material Symbols Rounded:style=Medium:pixelsize=18
+                          text: "\uf6a9"
+                          font: Font Awesome 6 Free:pixelsize=12
                           on-click:
                              left: "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
                              wheel-up: "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"
@@ -74,48 +74,21 @@ bar:
     - battery:
         name: "BAT1"
         content:
-          map:
-            conditions:
-              state == "discharging":
-                - string:
-                    text: "\ue1a4"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=18
-                - string:
-                    text: "{capacity}%"
-                    left-margin: 3
-                    right-margin: 15
-              state == "not charging":
-                - string:
-                    text: "\ue1a4"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=18
-                - string:
-                    text: "{capacity}%"
-                    left-margin: 3
-                    right-margin: 15
-              state == "full":
-                - string:
-                    text: "\ue1a4"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=18
-                - string:
-                    text: "{capacity}%"
-                    left-margin: 3
-                    right-margin: 15
-              state == "charging":
-                - string:
-                    text: "\ue1a3"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=18
-                - string:
-                    text: "{capacity}%"
-                    left-margin: 3
-                    right-margin: 15
+          - string:
+              text: "\uf240"
+              font: Font Awesome 6 Free:pixelsize=12
+          - string:
+              text: "{capacity}%"
+              left-margin: 3
+              right-margin: 15
     - network:
         content:
           map:
             conditions:
               name == "wlan0":
                 - string:
-                    text: "\ue1ba"
-                    font: Material Symbols Rounded:style=Medium:pixelsize=18
+                    text: "\uf1eb"
+                    font: Font Awesome 6 Free:pixelsize=12
                 - string:
                     text: "{ipv4}"
                     left-margin: 3
@@ -125,15 +98,15 @@ bar:
         time-format: "%H:%M"
         content:
           - string:
-              text: "\ue8df"
-              font: Material Symbols Rounded:style=Medium:pixelsize=18
+              text: "\uf133"
+              font: Font Awesome 6 Free:style=Solid:pixelsize=12
           - string:
               text: "{date}"
               left-margin: 3
               right-margin: 15
           - string:
-              text: "\ue8b5"
-              font: Material Symbols Rounded:style=Medium:pixelsize=18
+              text: "\uf017"
+              font: Font Awesome 6 Free:style=Solid:pixelsize=12
           - string:
               text: "{time}"
               left-margin: 3
