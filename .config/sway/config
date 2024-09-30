@@ -157,7 +157,7 @@ exec {
 }
 
 # Window config
-client.focused $fg $bg $fg #2e9ef4 $fg
+client.focused $fg $bg $fg $fg $fg
 default_border pixel 1
 default_floating_border pixel 1
 
