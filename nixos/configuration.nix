@@ -74,12 +74,11 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  networking.firewall.enable = false;
-  networking.hostName = "X571GT";
-  networking.nameservers = [
-    "127.0.0.1"
-    "::1"
+  networking.firewall.enable = true;
+  networking.firewall.trustedInterfaces = [
+    "wlan0"
   ];
+  networking.hostName = "X571GT";
   networking.timeServers = [
     "time.cloudflare.com"
   ];
@@ -98,23 +97,37 @@
   security.rtkit.enable = true;
 
   services.logind.lidSwitch = "ignore";
-  services.nextdns.arguments = [
-    "-profile" "a96f8b"
-    "-cache-size" "10MB"
-  ];
-  services.nextdns.enable = true;
   services.pipewire.alsa.enable = true;
   services.pipewire.enable = true;
   services.pipewire.jack.enable = true;
   services.pipewire.pulse.enable = true;
   services.power-profiles-daemon.enable = true;
   services.printing.enable = true;
+  services.resovled.dnsovertls = "true";
+  services.resolved.dnssec = "true";
+  services.resolved.domains = [
+    "~."
+  ];
+  services.resolved.enable = true;
+  services.resolved.fallbackDns = [
+    "45.90.28.0#a96f8b.dns.nextdns.io"
+    "2a07:a8c0::#a96f8b.dns.nextdns.io"
+    "45.90.30.0#a96f8b.dns.nextdns.io"
+    "2a07:a8c1::#a96f8b.dns.nextdns.io"
+  ];
   services.xserver.videoDrivers = [
     "nvidia"
   ];
   services.xserver.xkb.layout = "us,us";
   services.xserver.xkb.variant = "colemak_dh,";
   services.xserver.xkb.options = "grp:shift_caps_toggle";
+
+  systemd.network.enable = true;
+  systemd.network.networks."50-wlan" = {
+    matchConfig.Name = "wlan0";
+    networkConfig.DHCP = "yes";
+    networkConfig.IgnoreCarrierLoss = "3s";
+  };
 
   time.timeZone = "Asia/Manila";
 
