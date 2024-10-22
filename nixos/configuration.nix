@@ -82,6 +82,7 @@
   networking.timeServers = [
     "time.cloudflare.com"
   ];
+  networking.useDHCP = false;
   networking.wireless.iwd.enable = true;
   networking.wireless.iwd.settings = {
     DriverQuirks = {
