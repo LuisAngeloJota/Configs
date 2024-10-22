@@ -24,7 +24,6 @@
   environment.systemPackages = with pkgs; [
     anki aria2 audacious
     btop
-    chromium
     ffmpeg firefox
     git
     handbrake
@@ -35,7 +34,7 @@
     protonup-qt
     rsync
     shotcut streamlink streamrip
-    ventoy vscode-fhs
+    ventoy vivaldi vscode-fhs
     wireguard-tools
     qpwgraph
     yt-dlp
