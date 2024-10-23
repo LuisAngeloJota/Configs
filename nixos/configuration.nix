@@ -34,7 +34,7 @@
     obs-studio
     protonup-qt
     rsync
-    shotcut streamlink streamrip
+    sbctl shotcut streamlink streamrip
     ventoy vivaldi vscode-fhs
     wireguard-tools
     qpwgraph
