@@ -30,6 +30,7 @@
     imagemagick
     libarchive libreoffice-fresh localsend
     mediainfo mpv
+    niv
     obs-studio
     protonup-qt
     rsync
