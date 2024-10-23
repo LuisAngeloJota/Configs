@@ -80,6 +80,12 @@
     "wlan0"
   ];
   networking.hostName = "X571GT";
+  networking.nameservers = [
+    "45.90.28.0#a96f8b.dns.nextdns.io"
+    "2a07:a8c0::#a96f8b.dns.nextdns.io"
+    "45.90.30.0#a96f8b.dns.nextdns.io"
+    "2a07:a8c1::#a96f8b.dns.nextdns.io"
+  ];
   networking.timeServers = [
     "time.cloudflare.com"
   ];
