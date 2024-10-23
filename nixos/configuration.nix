@@ -105,7 +105,7 @@
   services.pipewire.pulse.enable = true;
   services.power-profiles-daemon.enable = true;
   services.printing.enable = true;
-  services.resovled.dnsovertls = "true";
+  services.resolved.dnsovertls = "true";
   services.resolved.dnssec = "true";
   services.resolved.domains = [
     "~."
