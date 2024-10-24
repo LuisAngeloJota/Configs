@@ -61,6 +61,7 @@
   ];
 
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = false;
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.open = true;
   hardware.nvidia.prime.intelBusId = "PCI:0:2:0";
