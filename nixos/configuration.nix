@@ -35,7 +35,7 @@
     protonup-qt
     rsync
     sbctl shotcut streamlink streamrip
-    ventoy vivaldi vscode-fhs
+    ventoy vivaldi vivaldi-ffmpeg-codecs vscode-fhs
     wireguard-tools
     qpwgraph
     yt-dlp
