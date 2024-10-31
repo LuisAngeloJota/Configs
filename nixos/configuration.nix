@@ -22,6 +22,7 @@
   console.useXkbConfig = true;
 
   environment.systemPackages = with pkgs; [
+    (chromium.override { enableWideVine = true; })
     anki aria2 audacious
     btop
     ffmpeg firefox
@@ -35,7 +36,7 @@
     protonup-qt
     rsync
     sbctl shotcut streamlink streamrip
-    ventoy vivaldi vscode-fhs
+    ventoy vscode-fhs
     wireguard-tools
     qpwgraph
     yt-dlp
