@@ -22,9 +22,8 @@
   console.useXkbConfig = true;
 
   environment.systemPackages = with pkgs; [
-    (chromium.override { enableWideVine = true; })
     anki aria2 audacious
-    btop
+    brave btop
     ffmpeg firefox
     git
     handbrake
