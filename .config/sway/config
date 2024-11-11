@@ -5,7 +5,7 @@ set $mod Mod1
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
 
-output HDMI-A-1 mode 1920x1080@120.000hz
+output HDMI-A-1 mode 1920x1080@120.000hz max_render_time off allow_tearing yes
 
 workspace 1 output HDMI-A-1
 
