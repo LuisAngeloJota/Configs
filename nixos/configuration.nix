@@ -106,6 +106,7 @@
   security.rtkit.enable = true;
 
   services.logind.lidSwitch = "ignore";
+  services.logind.powerKey = "ignore";
   services.pipewire.alsa.enable = true;
   services.pipewire.enable = true;
   services.pipewire.jack.enable = true;
