@@ -32,7 +32,7 @@
     mediainfo mpv
     niv
     obs-studio
-    protonup-qt
+    protonup-qt pwvucontrol
     rsync
     sbctl shotcut streamlink streamrip
     ventoy vscode-fhs
@@ -82,10 +82,7 @@
   ];
   networking.hostName = "X571GT";
   networking.nameservers = [
-    "45.90.28.0#a96f8b.dns.nextdns.io"
-    "2a07:a8c0::#a96f8b.dns.nextdns.io"
-    "45.90.30.0#a96f8b.dns.nextdns.io"
-    "2a07:a8c1::#a96f8b.dns.nextdns.io"
+    "127.0.0.1"
   ];
   networking.timeServers = [
     "time.cloudflare.com"
@@ -105,6 +102,15 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
+  services.dnsproxy.enable = true;
+  services.dnsproxy.flags = [
+    "--bootstrap=94.140.14.49"
+    "--cache"
+    "--cache-size=10485760"
+    "--listen=127.0.0.1"
+    "--port=53"
+    "--upstream=quic://4e5a163d.d.adguard-dns.com"
+  ];
   services.logind.lidSwitch = "ignore";
   services.logind.powerKey = "ignore";
   services.pipewire.alsa.enable = true;
@@ -113,17 +119,9 @@
   services.pipewire.pulse.enable = true;
   services.power-profiles-daemon.enable = true;
   services.printing.enable = true;
-  services.resolved.dnsovertls = "true";
-  services.resolved.dnssec = "true";
-  services.resolved.domains = [
-    "~."
-  ];
   services.resolved.enable = true;
   services.resolved.fallbackDns = [
-    "45.90.28.0#a96f8b.dns.nextdns.io"
-    "2a07:a8c0::#a96f8b.dns.nextdns.io"
-    "45.90.30.0#a96f8b.dns.nextdns.io"
-    "2a07:a8c1::#a96f8b.dns.nextdns.io"
+    "127.0.0.1"
   ];
   services.xserver.videoDrivers = [
     "nvidia"
