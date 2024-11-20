@@ -10,7 +10,7 @@ output HDMI-A-1 mode 1920x1080@120.000hz max_render_time off allow_tearing yes
 workspace 1 output HDMI-A-1
 
 # Idle management
-exec swayidle -w timeout 30 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+exec swayidle -w timeout 60 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
 # Inhibit idle on current workspace while fullscreen
 for_window [workspace="__focused__"] inhibit_idle fullscreen
