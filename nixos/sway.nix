@@ -12,6 +12,7 @@
   ];
   programs.sway.extraPackages = with pkgs; [
     brightnessctl
+    cliphist
     foot fuzzel
     glib adwaita-icon-theme grim
     libnotify
@@ -20,7 +21,7 @@
     slurp swaybg swayidle swaylock
     tesseract
     vulkan-validation-layers
-    wl-clipboard
+    wl-clipboard wl-clip-persist
     yambar
   ];
   programs.sway.wrapperFeatures.gtk = true;
