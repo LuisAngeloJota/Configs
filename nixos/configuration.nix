@@ -32,7 +32,7 @@
     mediainfo mpv
     niv
     obs-studio
-    protonup-qt pwvucontrol
+    pandoc protonup-qt pwvucontrol
     rsync
     sbctl shotcut streamlink streamrip
     ventoy vscode-fhs
