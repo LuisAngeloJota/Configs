@@ -120,7 +120,6 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Clipboard
-exec wl-clip-persist --clipboard regular
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 bindsym $mod+v exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
