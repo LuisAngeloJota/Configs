@@ -21,7 +21,7 @@
     slurp swaybg swayidle swaylock
     tesseract
     vulkan-validation-layers
-    wl-clipboard wl-clip-persist
+    wl-clipboard
     yambar
   ];
   programs.sway.wrapperFeatures.gtk = true;
