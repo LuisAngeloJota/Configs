@@ -83,7 +83,7 @@
   ];
   networking.hostName = "X571GT";
   networking.nameservers = [
-    "127.0.0.1"
+    "194.242.2.4#base.dns.mullvad.net"
   ];
   networking.timeServers = [
     "time.cloudflare.com"
@@ -103,15 +103,6 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
-  services.dnsproxy.enable = true;
-  services.dnsproxy.flags = [
-    "--bootstrap=94.140.14.49"
-    "--cache"
-    "--cache-size=10485760"
-    "--listen=127.0.0.1"
-    "--port=53"
-    "--upstream=quic://4e5a163d.d.adguard-dns.com"
-  ];
   services.logind.lidSwitch = "ignore";
   services.logind.powerKey = "ignore";
   services.pipewire.alsa.enable = true;
@@ -120,9 +111,14 @@
   services.pipewire.pulse.enable = true;
   services.power-profiles-daemon.enable = true;
   services.printing.enable = true;
+  services.resolved.dnsovertls = "true";
+  services.resolved.dnssec = "true";
+  services.resolved.domains = [
+    "~."
+  ];
   services.resolved.enable = true;
   services.resolved.fallbackDns = [
-    "127.0.0.1"
+    "194.242.2.4#base.dns.mullvad.net"
   ];
   services.xserver.videoDrivers = [
     "nvidia"
