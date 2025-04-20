@@ -123,9 +123,6 @@
   services.xserver.videoDrivers = [
     "nvidia"
   ];
-  services.xserver.xkb.layout = "us,us";
-  services.xserver.xkb.variant = "colemak_dh,";
-  services.xserver.xkb.options = "grp:shift_caps_toggle";
 
   systemd.network.enable = true;
   systemd.network.networks."50-wlan" = {
