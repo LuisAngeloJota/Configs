@@ -85,7 +85,7 @@ bar:
         content:
           map:
             conditions:
-              name == "wlan0":
+              name == "wlp3s0":
                 - string:
                     text: "\uf1eb"
                     font: Font Awesome 6 Free:pixelsize=12
