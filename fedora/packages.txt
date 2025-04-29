@@ -25,6 +25,8 @@ yambar yt-dlp
 
 # Intsall RPM Fusion & codecs
 
+# Install Nvidia Driver
+
 # Install Brave Browesr
 
 # Install Anytpe
