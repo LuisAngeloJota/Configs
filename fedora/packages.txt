@@ -1,0 +1,32 @@
+# Setup Configs
+git clone --depth 1 https://github.com/LuisAngeloJota/Configs
+
+# Install Native Packages
+sudo dnf install \
+adwaita-icon-theme audacious \
+brightnessctl btop \
+firefox foot fuzzel \
+glib gnome-keyring grim \
+handbrake-gui \
+libarchive libnotify \
+mako mpv \
+obs-studio \
+playerctl \
+rsync \
+slurp swaybg swayidle \
+tesseract thunar \
+vulkan-validation-layers \
+wireguard-tools wl-clipboard \
+qpwgraph \
+xdg-desktop-portal-wlr \
+yambar yt-dlp
+
+# Third Party Packages
+
+# Intsall RPM Fusion & codecs
+
+# Install Brave Browesr
+
+# Install Anytpe
+
+# Install Visual Studio Code
