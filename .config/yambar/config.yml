@@ -24,13 +24,11 @@ bar:
                     text: "{name}"
                     left-margin: 6
                     right-margin: 6
-                    on-click: "swaymsg --quiet workspace {name}"
                 state == "invisible":
                   string:
                     text: "{name}"
                     left-margin: 6
                     right-margin: 6
-                    on-click: "swaymsg --quiet workspace {name}"
                 state == "urgent":
                   string:
                     text: "{name}"
@@ -38,7 +36,6 @@ bar:
                     right-margin: 6
                     deco:
                       background: {color: FF6961FF}
-                    on-click: "swaymsg --quiet workspace {name}"
   right:
     - pipewire:
         content:
