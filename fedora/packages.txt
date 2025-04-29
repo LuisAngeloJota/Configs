@@ -1,5 +1,5 @@
 # Setup Configs
-git clone --depth 1 https://github.com/LuisAngeloJota/Configs
+git clone --depth 1 https://github.com/LuisAngeloJota/dotfiles
 
 # Install Native Packages
 sudo dnf install \
