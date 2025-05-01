@@ -1,4 +1,5 @@
-n x571gt
-nh
+n uxplay
+p 50000,50001,50002
+s 1920x1080@60
 vs waylandsink
 fps 60
