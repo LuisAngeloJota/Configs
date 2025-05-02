@@ -30,5 +30,3 @@ yambar yt-dlp
 # Install Brave Browesr
 
 # Install Anytpe
-
-# Install Visual Studio Code
