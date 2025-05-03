@@ -1,27 +1,26 @@
+#!/usr/bin/env
+
 # Setup Configs
-git clone --depth 1 https://github.com/LuisAngeloJota/dotfiles
 
 # Install Native Packages
-sudo dnf install \
+sudo dnf install --skip-unavailable \
 adwaita-icon-theme audacious \
 brightnessctl btop \
 firefox foot fuzzel \
 glib gnome-keyring grim \
-handbrake-gui \
+handbrake-gui helix \
 libarchive libnotify \
-mako mpv \
+mako microcode_ctl mpv \
 obs-studio \
 playerctl \
 rsync \
-slurp swaybg swayidle \
+slurp sway swaybg swayidle \
 tesseract thunar \
 vulkan-validation-layers \
 wireguard-tools wl-clipboard \
 qpwgraph \
 xdg-desktop-portal-wlr \
 yambar yt-dlp
-
-# Install Microcode
 
 # Third Party Packages
 
@@ -32,3 +31,5 @@ yambar yt-dlp
 # Install Brave Browesr
 
 # Install Anytpe
+
+# Install Tailscale
