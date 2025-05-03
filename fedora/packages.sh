@@ -21,7 +21,7 @@ slurp sway swaybg swayidle \
 tesseract thunar \
 vulkan-validation-layers \
 wireguard-tools wl-clipboard \
-qpwgraph \
+qbittorrent qpwgraph \
 xdg-desktop-portal-wlr \
 yambar yt-dlp
 
