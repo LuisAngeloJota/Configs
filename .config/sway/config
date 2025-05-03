@@ -141,11 +141,6 @@ input type:touchpad {
     natural_scroll enabled
     tap enabled
 }
-input type:keyboard {
-    xkb_layout us,us
-    xkb_variant colemak_dh,
-    xkb_options grp:shift_caps_toggle
-}
 input type:pointer {
     accel_profile flat
     pointer_accel -0.90
