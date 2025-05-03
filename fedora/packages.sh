@@ -1,19 +1,22 @@
 #!/usr/bin/env
 
-# Setup Configs
+# Setup dotfiles
+
+# Setup fonts
 
 # Install Native Packages
 sudo dnf install --skip-unavailable \
 adwaita-icon-theme audacious \
 brightnessctl btop \
-firefox foot fuzzel \
+firefox fontawesome-6-free-fonts foot fuzzel \
 glib gnome-keyring grim \
 handbrake-gui helix \
+jetbrains-mono-fonts-all \
 libarchive libnotify \
 mako microcode_ctl mpv \
 obs-studio \
 playerctl \
-rsync \
+rsms-inter-fonts rsync \
 slurp sway swaybg swayidle \
 tesseract thunar \
 vulkan-validation-layers \
