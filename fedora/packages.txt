@@ -21,6 +21,8 @@ qpwgraph \
 xdg-desktop-portal-wlr \
 yambar yt-dlp
 
+# Install Microcode
+
 # Third Party Packages
 
 # Intsall RPM Fusion & codecs
