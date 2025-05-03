@@ -10,10 +10,11 @@ adwaita-icon-theme audacious \
 brightnessctl btop \
 firefox fontawesome-6-free-fonts foot fuzzel \
 glib gnome-keyring grim \
-handbrake-gui helix \
+handbrake-gui \
 jetbrains-mono-fonts-all \
 libarchive libnotify \
 mako microcode_ctl mpv \
+neovim \
 obs-studio \
 playerctl power-profiles-daemon \
 rsms-inter-fonts rsync \
