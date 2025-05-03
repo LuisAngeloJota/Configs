@@ -15,7 +15,7 @@ jetbrains-mono-fonts-all \
 libarchive libnotify \
 mako microcode_ctl mpv \
 obs-studio \
-playerctl \
+playerctl power-profiles-daemon \
 rsms-inter-fonts rsync \
 slurp sway swaybg swayidle \
 tesseract thunar \
