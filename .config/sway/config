@@ -32,7 +32,7 @@ output * bg ~/.config/sway/background.png fill
 bindsym $mod+Space exec fuzzel | xargs swaymsg exec --
 
 # Terminal
-bindsym $mod+Return exec foot
+bindsym $mod+Return exec alacritty
 
 # Kill focused window
 bindsym $mod+q kill
