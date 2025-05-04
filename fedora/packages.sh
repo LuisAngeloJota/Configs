@@ -10,7 +10,6 @@ adwaita-icon-theme alacritty audacious \
 brightnessctl btop \
 firefox fontawesome-6-free-fonts fuzzel \
 glib gnome-keyring grim \
-handbrake-gui \
 jetbrains-mono-fonts-all \
 libarchive libnotify \
 mako microcode_ctl mpv \
